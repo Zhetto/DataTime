@@ -8,6 +8,11 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     float force;
     Vector3 temp;
+    public bool maxMin;
+    public float xMin;
+    public float xMax;
+    public float yMin;
+    public float yMax;
 
 
     void Start()
@@ -22,18 +27,10 @@ public class CameraController : MonoBehaviour
         {
             temp = Vector3.MoveTowards(this.transform.position, playerTransform.transform.position, force);
             this.transform.position = new Vector3(temp.x, temp.y+.3f, -10);
-            //this.temp = transform.position;
-            //if (playerTransform.position.x > minLimit.x && playerTransform.position.x < maxLimit.x)
-            //{
-            //    temp.x = playerTransform.position.x;
-            //}
-
-            //if (playerTransform.position.y > minLimit.y && playerTransform.position.y < maxLimit.y)
-            //{
-            //    temp.y = playerTransform.position.y+3;
-            //}
-
-            //this.transform.position = temp;
+            if (maxMin)
+            {
+                transform.position = new Vector3(Mathf.Clamp(playerTransform.position.x, xMin, xMax), Mathf.Clamp(playerTransform.position.y, yMin, yMax), 2 * playerTransform.position.z);
+            }           
         }
     }
 }
