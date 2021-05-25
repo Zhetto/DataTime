@@ -12,7 +12,7 @@ public class PlayerControllerJ : MonoBehaviour
     float forceJump;
     bool jump,climb;
     Vector3  movement;
-    PlatformJ platform;
+    Platform platform;
     BoxcontrollerJ box;
     public GameObject projectile;
     public Transform firePosition;
@@ -123,9 +123,9 @@ public class PlayerControllerJ : MonoBehaviour
         {
             jump = true;
 
-            if (collision.gameObject.GetComponent<PlatformJ>() != null)
+            if (collision.gameObject.GetComponent<Platform>() != null)
             {
-                this.platform = collision.gameObject.GetComponent<PlatformJ>();
+                this.platform = collision.gameObject.GetComponent<Platform>();
             }
             else
             {
@@ -216,7 +216,7 @@ public class PlayerControllerJ : MonoBehaviour
 
     private void Fire()
     {
-        GameObject obj = ObjectPoolerJ.current.GetPooledObject();
+        GameObject obj = ObjectPooler.current.GetPooledObject();
         if (obj == null) return;
         obj.GetComponent<ProjectileControllerJ>().Atirando(transform);
         obj.transform.position = firePosition.position;

@@ -63,7 +63,7 @@ public class EnemyControllerJ : MonoBehaviour
 
     private void Fire()
     {
-        GameObject obj = ObjectPoolerJ.current.GetPooledObject();
+        GameObject obj = ObjectPooler.current.GetPooledObject();
         if (obj == null) return;
         obj.GetComponent<ProjectileControllerJ>().Atirando(transform);
         obj.transform.position = firePositionInimigo.position;
