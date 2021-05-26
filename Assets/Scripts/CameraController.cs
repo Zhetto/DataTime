@@ -17,12 +17,14 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
         if (!GameController.Pause)
         {
             temp = Vector3.MoveTowards(this.transform.position, playerTransform.transform.position, force);

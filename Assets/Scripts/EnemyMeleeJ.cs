@@ -20,12 +20,14 @@ public class EnemyMeleeJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
         float distanceFromPlayer = Vector2.Distance(transform.position, target.position);
         if (distanceFromPlayer < lineOfSite)
         {
