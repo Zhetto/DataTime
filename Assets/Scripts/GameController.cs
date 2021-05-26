@@ -62,7 +62,6 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(playerChoice);
         if (Input.GetKeyDown(KeyPause) && !Pause)
         {
             Pause = true;
