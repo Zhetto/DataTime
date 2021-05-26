@@ -7,6 +7,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1055878902661709646, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055878903755661288, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: forceJump
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055878903755661288, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 2348737409916590242, guid: f32e9ddb5107ee440978300f1aaefdd5,
+        type: 3}
+    - target: {fileID: 1055878903755661288, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: temLaranja
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055878903755661288, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: laranjaUsos
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1055878903755661290, guid: 7ea09d701319839439efe417f10b67ab,
         type: 3}
       propertyPath: m_Sprite
@@ -78,5 +104,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cc312db5d0c47a048bf7392742880333, type: 2}
+    - target: {fileID: 1060152061198833978, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: qntSede
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea09d701319839439efe417f10b67ab, type: 3}

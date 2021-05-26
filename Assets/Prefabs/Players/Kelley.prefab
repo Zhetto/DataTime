@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055878902661709641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.2, y: 0, z: 0}
+  m_LocalPosition: {x: 14.6, y: 0, z: 0}
   m_LocalScale: {x: 66.66667, y: 66.66667, z: 1}
   m_Children: []
   m_Father: {fileID: 1055878903755661291}
@@ -152,7 +152,7 @@ MonoBehaviour:
   vida: {fileID: 1060152061198833978}
   speedMovement: 0.1
   speedClimb: 3
-  forceJump: 380
+  forceJump: 500
   projectile: {fileID: 2348737409916590242, guid: f32e9ddb5107ee440978300f1aaefdd5,
     type: 3}
   firePosition: {fileID: 1055878902661709646}
@@ -161,6 +161,8 @@ MonoBehaviour:
   inimigoCount: {fileID: 8998647026909744660, guid: a4a942992db03334bb4b5591480ba566,
     type: 3}
   temOdre: 0
+  temLaranja: 0
+  laranjaUsos: 0
 --- !u!50 &1055878903755661294
 Rigidbody2D:
   serializedVersion: 4
@@ -210,10 +212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf98e92130c21c4fb07b009f5f211d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sedeSlider: {fileID: 3689419355530298644, guid: 65199931d2dabc04aa975f29146cac22,
-    type: 3}
-  qntSede: 2147483647
-  qntVida: 10
   vidaSlidder: {fileID: 1654230553959920175, guid: 4929b9dc84ac95848990a37c90d4bf81,
     type: 3}
+  sedeSlider: {fileID: 3689419355530298644, guid: 65199931d2dabc04aa975f29146cac22,
+    type: 3}
+  qntVida: 10
+  qntSede: 500
   odre: {fileID: 1055878903755661288}

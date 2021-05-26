@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 8468337139655677988}
   - component: {fileID: 8468337139655677990}
   - component: {fileID: 8468337139655677989}
-  - component: {fileID: 3560306985772645649}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -134,7 +133,7 @@ MonoBehaviour:
   qntVida: 3
   vidaSlidder: {fileID: 1654230553959920175, guid: 4929b9dc84ac95848990a37c90d4bf81,
     type: 3}
-  odre: {fileID: 3560306985772645649}
+  odre: {fileID: 0}
 --- !u!50 &8468337139655677990
 Rigidbody2D:
   serializedVersion: 4
@@ -172,31 +171,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01120987, y: 0.015213347}
   m_Size: {x: 0.21430664, y: 0.27996483}
   m_Direction: 0
---- !u!114 &3560306985772645649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8468337139655677992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 210c413c3f4944247b5700ca88063f9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMovement: 5
-  speedClimb: 3
-  forceJump: 500
-  projectile: {fileID: 2348737409916590242, guid: f32e9ddb5107ee440978300f1aaefdd5,
-    type: 3}
-  firePosition: {fileID: 8468337138321044236}
-  fireRate: 2
-  life: 3
-  vida: {fileID: 8468337139655677988}
-  temOdre: 0
-  odreUsos: 3
-  temLaranja: 0
-  laranjaUsos: 0
-  inimigoCount: {fileID: 2734047300209080845, guid: 457801f54fe3b8349923a72270a51bcc,
-    type: 3}
-  count: 0
