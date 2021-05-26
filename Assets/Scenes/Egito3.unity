@@ -12454,6 +12454,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vida
       objectReference: {fileID: 0}
+    - target: {fileID: 1654230553959920172, guid: 4929b9dc84ac95848990a37c90d4bf81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1654230553959920174, guid: 4929b9dc84ac95848990a37c90d4bf81,
         type: 3}
       propertyPath: m_Pivot.x
