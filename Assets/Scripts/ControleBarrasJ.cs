@@ -16,12 +16,12 @@ public class ControleBarrasJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[0];
+        sedeSlider = GameObject.FindObjectsOfType<Slider>()[1];
         vidaSlidder.value = qntVida;
         sedeSlider.value = qntSede;
         sedeSlider.maxValue = qntSede;
         tempoSede = qntSede;
-        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[0];
-        sedeSlider = GameObject.FindObjectsOfType<Slider>()[1];
     }
 
     // Update is called once per frame
