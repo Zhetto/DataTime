@@ -20,8 +20,8 @@ public class ControleBarrasJ : MonoBehaviour
         sedeSlider.value = qntSede;
         sedeSlider.maxValue = qntSede;
         tempoSede = qntSede;
-        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[1];
-        sedeSlider = GameObject.FindObjectsOfType<Slider>()[0];
+        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[0];
+        sedeSlider = GameObject.FindObjectsOfType<Slider>()[1];
     }
 
     // Update is called once per frame
