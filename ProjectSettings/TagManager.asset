@@ -11,6 +11,9 @@ TagManager:
   - Comet
   - EnemyController
   - bullet
+  - Undefined
+  - Tiro
+  - Inimigo
   layers:
   - Default
   - TransparentFX

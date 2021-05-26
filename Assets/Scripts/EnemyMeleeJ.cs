@@ -77,11 +77,11 @@ public class EnemyMeleeJ : MonoBehaviour
             life--;
         }
 
-        if (life <= 0)
+        /*if (life <= 0)
         {
             Contador();
             Destroy(this.gameObject);
-        }
+        }*/
     }
 
 
