@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileControllerJ :  MonoBehaviour
+public class ProjectileControllerJ : MonoBehaviour
 {
     public float projectileSpeed;
     private Rigidbody2D rb;
@@ -20,7 +20,7 @@ public class ProjectileControllerJ :  MonoBehaviour
             {
                 rb.velocity = Vector3.left * projectileSpeed;
             }
-            
+
         }
     }
 
@@ -33,15 +33,10 @@ public class ProjectileControllerJ :  MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Inimigo") || collision.CompareTag("Player"))
+        if (collision.CompareTag("Inimigo") || collision.CompareTag("Player") || collision.CompareTag("Barreira") || collision.CompareTag("Floor"))
         {
             gameObject.SetActive(false);
             Debug.Log("Tiro desativado");
-        }
-
-        if (collision.CompareTag("Barreira") || collision.CompareTag("Floor"))
-        {
-            gameObject.SetActive(false);
         }
     }
 

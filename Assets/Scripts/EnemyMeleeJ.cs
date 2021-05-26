@@ -58,17 +58,20 @@ public class EnemyMeleeJ : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Tiro"))
-        {
-            life--;
-        }
 
         if (life <= 0)
         {
+            if (this.name.Contains("Warrior"))
+            {
+                EnemyController.spawnedEnemys--;
+                EnemyController.diedEnemys++;
+            }
             Contador();
             Destroy(this.gameObject);
         }
     }
+
+
 
     private void Contador()
     {

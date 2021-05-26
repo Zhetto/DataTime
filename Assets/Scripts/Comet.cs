@@ -16,6 +16,7 @@ public class Comet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         time = 0;
         delay = 5;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -61,7 +62,7 @@ public class Comet : MonoBehaviour
             this.GetComponent<BoxCollider2D>().enabled = false;
             player.transform.position = new Vector3(this.transform.position.x, this.transform.position.y +2, this.transform.position.z);
             time = Time.time;
-
+            player.GetComponent<PlayerController>().enabled = false;
         }
     }
 }

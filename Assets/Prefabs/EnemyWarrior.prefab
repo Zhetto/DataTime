@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 4894388222520793646}
   - component: {fileID: 4894388222520793634}
   - component: {fileID: 4894388222520793635}
-  - component: {fileID: 4894388222520793636}
-  - component: {fileID: 4894388222520793637}
+  - component: {fileID: 8998647026909744660}
   m_Layer: 0
   m_Name: EnemyWarrior
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,23 +151,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 54.686012, y: 165.47}
   m_EdgeRadius: 0
---- !u!58 &4894388222520793636
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4894388222520793647}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 552.1404
---- !u!114 &4894388222520793637
+--- !u!114 &8998647026909744660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,10 +160,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4894388222520793647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa79df3ad983bf04d9c16650f26f0a60, type: 3}
+  m_Script: {fileID: 11500000, guid: 7424b5217d8b82642bba56fd3e3774be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  right: 0
-  attencion: 0
-  stop: 0
-  speed: 0.05
+  velocidade: 2
+  target: {fileID: 0}
+  ladoDireito: 0
+  life: 1
+  lineOfSite: 6.46
+  count: 0

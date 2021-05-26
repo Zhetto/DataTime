@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public static int life;
+    public ControleBarrasJ vida;
     Rigidbody2D rb;
     [SerializeField]
     float speedMovement,speedClimb;
+    BoxcontrollerJ box;
     [SerializeField]
     float forceJump;
     bool jump,climb;
@@ -18,10 +20,14 @@ public class PlayerController : MonoBehaviour
     public static bool directionRight;
     Animator anim;
     float scaleX;
-
+    private Vector3 dRight;
+    private Vector3 dLeft;
     public GameObject projectile;
-    [SerializeField] Transform firePositionRight, firePositionLeft;
+    public Transform firePosition;
+    public int odreUsos = 3;
     public float fireRate;
+    public EnemyMeleeJ inimigoCount;
+    public bool temOdre = false;
 
     private void Awake()
     {
@@ -32,22 +38,20 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scaleX = this.transform.localScale.x;
-        life = 10;
-        fireRate = 0f;
-        if(SceneManager.GetActiveScene().name== "Fase2-level1")
-        {
-            life = 10;
-        }        
-        directionRight = true ;
-        movement = new Vector3(0,0,0);
+        life = 3;
+        dRight = transform.localScale;
+        dLeft = transform.localScale;
+        dLeft.x = dLeft.x * -1;
+        movement = new Vector3(0, 0, 0);
         rb = this.GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         rb.angularDrag = 1;
         rb.gravityScale = 2;
         speedMovement = speedMovement != 0 ? speedMovement : 1;
         forceJump = forceJump != 0 ? forceJump : 1;
+        fireRate = 0f;
         anim = GetComponent<Animator>();
+        
     }
 
 
@@ -60,16 +64,14 @@ public class PlayerController : MonoBehaviour
         {
             //Debug.Log("direita");
             this.transform.position += Vector3.right*speedMovement;
-            directionRight = true;
-            this.transform.localScale = new Vector3(scaleX,this.transform.localScale.y, this.transform.localScale.z);
+            transform.localScale = dRight;
             anim.SetBool("Walk", true);
         }
 
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.leftKey)))
         {
             this.transform.position += Vector3.left * speedMovement;
-            this.transform.localScale = new Vector3 (-scaleX, this.transform.localScale.y, this.transform.localScale.z);
-            directionRight = false;
+            transform.localScale = dLeft;
             anim.SetBool("Walk", true);
         }
 
@@ -81,6 +83,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.downKey)) && climb)
         {
             this.transform.position -= new Vector3(0, speedClimb * Time.deltaTime, 0);
+        }
+        if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.downKey)) && this.box != null)
+        {
+            this.jump = false;
+            this.box.gameObject.GetComponent<EdgeCollider2D>().enabled = false;
         }
         if (life <= 0)
         {
@@ -142,7 +149,11 @@ public class PlayerController : MonoBehaviour
             {
                 this.platform = null;
             }
-        }        
+        }
+        if (collision.gameObject.CompareTag("Inimigo"))
+        {
+            vida.Dano();
+        }
     }
 
     public void OnCollisionExit2D(Collision2D collision)
@@ -175,12 +186,41 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Tiro"))
+        {
+            Debug.Log("Player recebeu Dano");
+        }
+
+        if (collision.CompareTag("NPC"))
+        {
+            temOdre = true;
+        }
+
+        if (collision.CompareTag("Saida1"))
+        {
+            SceneManager.LoadScene("Egito2");
+        }
+
+        if (collision.CompareTag("Saida2") && inimigoCount.count == 0)
+        {
+            SceneManager.LoadScene("Egito3");
+        }
+
+        if (collision.CompareTag("Saida3"))
+        {
+            SceneManager.LoadScene("Fase2-level1");
+        }
+    }
+
     private void Fire()
     {
         GameObject obj = ObjectPooler.current.GetPooledObject();
         if (obj == null) return;
-
-        obj.transform.position = firePositionRight.position;
+        obj.GetComponent<ProjectileControllerJ>().Atirando(transform);
+        obj.transform.position = firePosition.position;
+        obj.transform.rotation = firePosition.rotation;
         obj.SetActive(true);
     }
 }
