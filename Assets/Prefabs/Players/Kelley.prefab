@@ -152,7 +152,7 @@ MonoBehaviour:
   vida: {fileID: 1060152061198833978}
   speedMovement: 0.1
   speedClimb: 3
-  forceJump: 380
+  forceJump: 500
   projectile: {fileID: 2348737409916590242, guid: f32e9ddb5107ee440978300f1aaefdd5,
     type: 3}
   firePosition: {fileID: 1055878902661709646}
@@ -161,6 +161,8 @@ MonoBehaviour:
   inimigoCount: {fileID: 8998647026909744660, guid: a4a942992db03334bb4b5591480ba566,
     type: 3}
   temOdre: 0
+  temLaranja: 0
+  laranjaUsos: 0
 --- !u!50 &1055878903755661294
 Rigidbody2D:
   serializedVersion: 4
