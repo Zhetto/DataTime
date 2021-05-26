@@ -71,6 +71,17 @@ public class EnemyMeleeJ : MonoBehaviour
             Contador();
             Destroy(this.gameObject);
         }
+
+        if (collision.CompareTag("Tiro"))
+        {
+            life--;
+        }
+
+        if (life <= 0)
+        {
+            Contador();
+            Destroy(this.gameObject);
+        }
     }
 
 

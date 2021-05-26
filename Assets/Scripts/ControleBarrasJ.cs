@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class ControleBarrasJ : MonoBehaviour
 {
+    public Slider vidaSlidder;
     public Slider sedeSlider;
+    public int qntVida = 3;
     public int qntSede = 10;
     float tempoSede;
-    public int qntVida = 3;
-    public Slider vidaSlidder;
     public PlayerController odre;
 
     // Start is called before the first frame update
@@ -20,8 +20,8 @@ public class ControleBarrasJ : MonoBehaviour
         sedeSlider.value = qntSede;
         sedeSlider.maxValue = qntSede;
         tempoSede = qntSede;
-        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[0];
-        sedeSlider = GameObject.FindObjectsOfType<Slider>()[1];
+        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[1];
+        sedeSlider = GameObject.FindObjectsOfType<Slider>()[0];
     }
 
     // Update is called once per frame

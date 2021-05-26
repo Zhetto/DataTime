@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public EnemyMeleeJ inimigoCount;
     public bool temOdre = false;
+    public bool temLaranja = false;
+    public int laranjaUsos;
 
     private void Awake()
     {
@@ -131,6 +133,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(GameController.getKeyCode(LoadControl.Control.resumeKey)))
         {
             anim.SetBool("Fire", false);
+        }
+
+        if (Input.GetKey(KeyCode.Q) && temLaranja == true && laranjaUsos > 0)
+        {
+            vida.RecuperaVida();
+            life++;
         }
 
     }

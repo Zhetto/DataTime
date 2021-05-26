@@ -210,10 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf98e92130c21c4fb07b009f5f211d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sedeSlider: {fileID: 3689419355530298644, guid: 65199931d2dabc04aa975f29146cac22,
-    type: 3}
-  qntSede: 2147483647
-  qntVida: 10
   vidaSlidder: {fileID: 1654230553959920175, guid: 4929b9dc84ac95848990a37c90d4bf81,
     type: 3}
+  sedeSlider: {fileID: 3689419355530298644, guid: 65199931d2dabc04aa975f29146cac22,
+    type: 3}
+  qntVida: 10
+  qntSede: 500
   odre: {fileID: 1055878903755661288}

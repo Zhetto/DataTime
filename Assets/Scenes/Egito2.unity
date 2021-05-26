@@ -2919,12 +2919,12 @@ PrefabInstance:
     - target: {fileID: 3689419355530298644, guid: 65199931d2dabc04aa975f29146cac22,
         type: 3}
       propertyPath: m_Value
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3689419355530298644, guid: 65199931d2dabc04aa975f29146cac22,
         type: 3}
       propertyPath: m_MaxValue
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3689419355530298646, guid: 65199931d2dabc04aa975f29146cac22,
         type: 3}
