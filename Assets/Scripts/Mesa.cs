@@ -17,9 +17,9 @@ public class Mesa : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
-        if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)) && inTable)
+        if (Input.GetKeyDown(KeyCode.E) && inTable)
         {
             if(opened)
             {

@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
     {
         if (hover)
         {
-            if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if (!locked)
                 {
