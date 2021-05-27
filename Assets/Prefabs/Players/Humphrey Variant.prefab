@@ -107,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 1060152061198833978, guid: 7ea09d701319839439efe417f10b67ab,
         type: 3}
       propertyPath: qntSede
-      value: 500
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea09d701319839439efe417f10b67ab, type: 3}

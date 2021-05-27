@@ -217,5 +217,5 @@ MonoBehaviour:
   sedeSlider: {fileID: 3689419355530298644, guid: 65199931d2dabc04aa975f29146cac22,
     type: 3}
   qntVida: 10
-  qntSede: 500
+  qntSede: 2147483647
   odre: {fileID: 1055878903755661288}

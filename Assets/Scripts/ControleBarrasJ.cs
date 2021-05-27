@@ -16,8 +16,12 @@ public class ControleBarrasJ : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[0];
-        sedeSlider = GameObject.FindObjectsOfType<Slider>()[1];
+        if(SceneManager.GetActiveScene().name == "Egito2")
+        {
+            qntSede = 20;
+        }
+        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[1];
+        sedeSlider = GameObject.FindObjectsOfType<Slider>()[0];
         vidaSlidder.value = qntVida;
         sedeSlider.value = qntSede;
         sedeSlider.maxValue = qntSede;
