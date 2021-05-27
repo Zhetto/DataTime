@@ -706,8 +706,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &267776147
-BoxCollider2D:
+--- !u!68 &267776147
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -719,19 +719,13 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.1572113, y: -0.05324456}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 57.524704, y: 1.9099998}
-    newSize: {x: 57.524704, y: 1.9099998}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 55.21028, y: 1.8035107}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -28.737097, y: 0.8798719}
+  - {x: 25.95371, y: 0.85756356}
+  - {x: 26.509295, y: 1.1257348}
+  - {x: 31.413996, y: 1.1214051}
 --- !u!212 &267776148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1313,7 +1307,7 @@ PrefabInstance:
     - target: {fileID: 3689419355530298646, guid: 65199931d2dabc04aa975f29146cac22,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3689419355530298647, guid: 65199931d2dabc04aa975f29146cac22,
         type: 3}
@@ -3240,7 +3234,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1344277167}
   - component: {fileID: 1344277168}
-  - component: {fileID: 1344277169}
   m_Layer: 0
   m_Name: Pier
   m_TagString: Floor
@@ -3312,32 +3305,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1344277169
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344277166}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.9577246, y: -1.3210597}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.16, y: 4.86}
-    newSize: {x: 13.16, y: 4.86}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 11.244551, y: 2.2178807}
-  m_EdgeRadius: 2.51
 --- !u!1 &1379612369
 GameObject:
   m_ObjectHideFlags: 0
