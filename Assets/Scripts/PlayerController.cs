@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public bool temOdre = false;
     public bool temLaranja = false;
     public int laranjaUsos;
+    [SerializeField]
+    GameObject jumpFx;
 
     private void Awake()
     {
@@ -103,7 +105,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, forceJump));
             this.jump = false;
+            anim.SetBool("Jump", true);
+            Instantiate(jumpFx, this.transform.position - Vector3.up * 1.35f, new Quaternion(0, 0, 0, 0));
         }
+
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.upKey)) && climb)
         {
             this.transform.position += new Vector3(0, speedClimb * Time.deltaTime, 0);
@@ -148,6 +153,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             jump = true;
+            anim.SetBool("Jump", false);
 
             if (collision.gameObject.GetComponent<Platform>() != null)
             {
@@ -229,6 +235,7 @@ public class PlayerController : MonoBehaviour
         obj.GetComponent<ProjectileControllerJ>().Atirando(transform);
         obj.transform.position = firePosition.position;
         obj.transform.rotation = firePosition.rotation;
+        obj.transform.localScale = new Vector3(this.transform.localScale.x < 0 ? -6 : 6,obj.transform.localScale.y, obj.transform.localScale.z);
         obj.SetActive(true);
     }
 }

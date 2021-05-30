@@ -163,6 +163,7 @@ MonoBehaviour:
   temOdre: 0
   temLaranja: 0
   laranjaUsos: 0
+  jumpFx: {fileID: 4117134515519056849, guid: 6e44fc0eecbf8494c858f7827857c29d, type: 3}
 --- !u!50 &1055878903755661294
 Rigidbody2D:
   serializedVersion: 4
