@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     GameObject jumpFx;
     public GameObject dialogo;
+    public Text textoL;
 
 
     private void Awake()
@@ -68,7 +70,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         testeLaranjas = laranjaUsos;
- 
+
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
             //Debug.Log("direita");
@@ -236,6 +238,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Laranja"))
         {
             laranjaUsos++;
+            textoL.text = testeLaranjas.ToString();
             Debug.Log("Laranja add");
         }
 
@@ -243,7 +246,6 @@ public class PlayerController : MonoBehaviour
         {
             dialogo.GetComponent<DialogueController>().enabled = true;
             anim.SetBool("Walk", false);
-            anim.SetBool("Idle", true);
             laranjaUsos += 3;
             pegouLaranjas = true;
         }
