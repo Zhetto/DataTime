@@ -21,6 +21,7 @@ TagManager:
   - NPC
   - Saida2
   - Odre
+  - Dialogo
   layers:
   - Default
   - TransparentFX

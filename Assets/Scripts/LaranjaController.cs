@@ -20,7 +20,7 @@ public class LaranjaController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

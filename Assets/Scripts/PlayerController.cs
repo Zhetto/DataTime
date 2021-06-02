@@ -28,14 +28,16 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public EnemyMeleeJ inimigoCount;
     public bool temOdre = false;
-    public bool temLaranja = false;
-    public static int laranjaUsos;
+    public static int laranjaUsos = 0;
+    public int testeLaranjas;
+    public bool pegouLaranjas;
     [SerializeField]
     GameObject jumpFx;
+    public GameObject dialogo;
+
 
     private void Awake()
     {
-        laranjaUsos = 0;
         //this.gameObject.AddComponent<Rigidbody2D>();
         //this.gameObject.AddComponent<BoxCollider2D>();
 
@@ -56,7 +58,8 @@ public class PlayerController : MonoBehaviour
         forceJump = forceJump != 0 ? forceJump : 1;
         fireRate = 0f;
         anim = GetComponent<Animator>();
-        
+        dialogo = GameObject.FindGameObjectWithTag("Dialogo");
+        pegouLaranjas = false;
     }
 
 
@@ -64,6 +67,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        testeLaranjas = laranjaUsos;
  
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
@@ -141,7 +145,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Fire", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && temLaranja == true && laranjaUsos > 0)
+        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0)
         {
             laranjaUsos--;
             vida.RecuperaVida();
@@ -233,6 +237,15 @@ public class PlayerController : MonoBehaviour
         {
             laranjaUsos++;
             Debug.Log("Laranja add");
+        }
+
+        if (collision.CompareTag("NPC") && laranjaUsos == 0 && pegouLaranjas == false)
+        {
+            dialogo.GetComponent<DialogueController>().enabled = true;
+            anim.SetBool("Walk", false);
+            anim.SetBool("Idle", true);
+            laranjaUsos += 3;
+            pegouLaranjas = true;
         }
     }
 
