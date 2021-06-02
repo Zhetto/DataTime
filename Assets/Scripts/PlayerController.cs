@@ -140,8 +140,9 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Fire", false);
         }
 
-        if (Input.GetKey(KeyCode.Q) && temLaranja == true && laranjaUsos > 0)
+        if (Input.GetKeyDown(KeyCode.Q) && temLaranja == true && laranjaUsos > 0)
         {
+            laranjaUsos--;
             vida.RecuperaVida();
             life++;
         }

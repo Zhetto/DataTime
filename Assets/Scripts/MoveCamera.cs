@@ -11,12 +11,16 @@ public class MoveCamera : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (playerTransform == null)
+        {
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         if (playerTransform.position.y < maxY && playerTransform.position.y > minY)
         {
             cam.transform.position = new Vector3(cam.transform.position.x, playerTransform.position.y, cam.transform.position.z);
