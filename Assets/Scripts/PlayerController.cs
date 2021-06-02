@@ -29,12 +29,13 @@ public class PlayerController : MonoBehaviour
     public EnemyMeleeJ inimigoCount;
     public bool temOdre = false;
     public bool temLaranja = false;
-    public int laranjaUsos;
+    public static int laranjaUsos;
     [SerializeField]
     GameObject jumpFx;
 
     private void Awake()
     {
+        laranjaUsos = 0;
         //this.gameObject.AddComponent<Rigidbody2D>();
         //this.gameObject.AddComponent<BoxCollider2D>();
 
@@ -207,7 +208,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player recebeu Dano");
         }
 
-        if (collision.CompareTag("NPC"))
+        if (collision.CompareTag("Odre"))
         {
             temOdre = true;
         }
@@ -225,6 +226,12 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Saida3"))
         {
             SceneManager.LoadScene("Fase2-level1");
+        }
+
+        if (collision.CompareTag("Laranja"))
+        {
+            laranjaUsos++;
+            Debug.Log("Laranja add");
         }
     }
 
