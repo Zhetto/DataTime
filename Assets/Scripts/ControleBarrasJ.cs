@@ -37,11 +37,13 @@ public class ControleBarrasJ : MonoBehaviour
         if (sedeSlider.value <= 0)
         {
             Debug.Log("Você morreu Desidratado");
+            Checkpoint.decreaseRestLife();
             SceneManager.LoadScene("Menu");
         }
 
         if (vidaSlidder.value <= 0)
         {
+            Checkpoint.decreaseRestLife();
             SceneManager.LoadScene("Menu");
         }
 

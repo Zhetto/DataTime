@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2183,6 +2183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691857455}
   - component: {fileID: 691857454}
+  - component: {fileID: 691857456}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2219,6 +2220,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &691857456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691857453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90328836e0ff5842b5ca7c689677533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823932072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,7 +4462,7 @@ PrefabInstance:
     - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -28.00003
+      value: -28.000038
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}

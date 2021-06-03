@@ -13,6 +13,6 @@ public class MainMenu : MonoBehaviour
 
     public void StarGame()
     {
-        SceneManager.LoadScene("Lab-01");
+        SceneManager.LoadScene(Checkpoint.lastLevelName);
     }
 }

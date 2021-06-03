@@ -34,11 +34,11 @@ public class MoveOfSet : MonoBehaviour
         {
             if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.leftKey)))
             {
-                offset = Vector3.right * force;
+                offset = Vector3.right * -force;
             }
             else if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
             {
-                offset = Vector3.left * force;
+                offset = Vector3.left * -force;
             }
             else
             {

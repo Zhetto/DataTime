@@ -73,8 +73,11 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         testeLaranjas = laranjaUsos;
-        textoL.text = testeLaranjas.ToString();
-        textoO.text = odreUsos.ToString();
+        if (textoL != null && textoO != null)
+        {
+            textoL.text = testeLaranjas.ToString();
+            textoO.text = odreUsos.ToString();
+        }
 
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
@@ -107,7 +110,8 @@ public class PlayerController : MonoBehaviour
         }
         if (life <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("Morreu");
+            Checkpoint.decreaseRestLife();
         }
     }
 
