@@ -24,6 +24,7 @@ TagManager:
   - Dialogo
   - TextoL
   - TextoO
+  - TextoBarraca
   layers:
   - Default
   - TransparentFX

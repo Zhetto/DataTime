@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public EnemyMeleeJ inimigoCount;
     public bool temOdre = false;
+    public bool pegouOdre;
     public static int laranjaUsos = 0;
     public int testeLaranjas;
     public bool pegouLaranjas;
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
     public GameObject dialogo;
     public Text textoL;
     public Text textoO;
+    public Text textoBarraca;
 
 
     private void Awake()
@@ -63,8 +65,11 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         dialogo = GameObject.FindGameObjectWithTag("Dialogo");
         pegouLaranjas = false;
+        pegouOdre = false;
         textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
         textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
+        textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
+        textoBarraca.gameObject.SetActive(false);
     }
 
 
@@ -215,6 +220,11 @@ public class PlayerController : MonoBehaviour
             this.rb.gravityScale = 2;
             this.climb = false;
         }
+
+        if (collision.CompareTag("Odre"))
+        {
+            textoBarraca.gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -224,10 +234,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player recebeu Dano");
         }
 
-        if (collision.CompareTag("Odre"))
+        if (collision.CompareTag("Odre") && pegouOdre == false)
         {
+            textoBarraca.gameObject.SetActive(true);
             temOdre = true;
             odreUsos = 3;
+            pegouOdre = true;
         }
 
         if (collision.CompareTag("Saida1"))
