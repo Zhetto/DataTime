@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     public Text textoO;
     public Text textoBarraca;
     SpriteRenderer sprite;
+    AudioSource dano;
 
 
     private void Awake()
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         sprite = GetComponent<SpriteRenderer>();
+        dano = GetComponent<AudioSource>();
 
         testeLaranjas = laranjaUsos;
         if (textoL != null && textoO != null)
@@ -164,7 +166,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Fire", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0 && life < 3)
+        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0)
         {
             laranjaUsos--;
             vida.RecuperaVida();
@@ -191,6 +193,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Inimigo"))
         {
+            dano.Play();
             StartCoroutine(TomarDano());
             vida.Dano();
         }
@@ -279,7 +282,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator TomarDano()
     {
         sprite.color = Color.red;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.25f);
         sprite.color = Color.white;
     }
     private void Fire()
