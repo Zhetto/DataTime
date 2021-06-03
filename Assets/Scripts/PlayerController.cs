@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,18 +25,22 @@ public class PlayerController : MonoBehaviour
     private Vector3 dLeft;
     public GameObject projectile;
     public Transform firePosition;
-    public int odreUsos = 3;
+    public int odreUsos;
     public float fireRate;
     public EnemyMeleeJ inimigoCount;
     public bool temOdre = false;
-    public bool temLaranja = false;
-    public static int laranjaUsos;
+    public static int laranjaUsos = 0;
+    public int testeLaranjas;
+    public bool pegouLaranjas;
     [SerializeField]
     GameObject jumpFx;
+    public GameObject dialogo;
+    public Text textoL;
+    public Text textoO;
+
 
     private void Awake()
     {
-        laranjaUsos = 0;
         //this.gameObject.AddComponent<Rigidbody2D>();
         //this.gameObject.AddComponent<BoxCollider2D>();
 
@@ -56,7 +61,10 @@ public class PlayerController : MonoBehaviour
         forceJump = forceJump != 0 ? forceJump : 1;
         fireRate = 0f;
         anim = GetComponent<Animator>();
-        
+        dialogo = GameObject.FindGameObjectWithTag("Dialogo");
+        pegouLaranjas = false;
+        textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
+        textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
     }
 
 
@@ -64,7 +72,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
- 
+        testeLaranjas = laranjaUsos;
+        textoL.text = testeLaranjas.ToString();
+        textoO.text = odreUsos.ToString();
+
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
             //Debug.Log("direita");
@@ -141,7 +152,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Fire", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && temLaranja == true && laranjaUsos > 0)
+        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0)
         {
             laranjaUsos--;
             vida.RecuperaVida();
@@ -212,6 +223,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Odre"))
         {
             temOdre = true;
+            odreUsos = 3;
         }
 
         if (collision.CompareTag("Saida1"))
@@ -233,6 +245,14 @@ public class PlayerController : MonoBehaviour
         {
             laranjaUsos++;
             Debug.Log("Laranja add");
+        }
+
+        if (collision.CompareTag("NPC") && laranjaUsos == 0 && pegouLaranjas == false)
+        {
+            dialogo.GetComponent<DialogueController>().enabled = true;
+            anim.SetBool("Walk", false);
+            laranjaUsos += 3;
+            pegouLaranjas = true;
         }
     }
 

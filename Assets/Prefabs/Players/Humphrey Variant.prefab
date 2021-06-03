@@ -14,6 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1055878903755661288, guid: 7ea09d701319839439efe417f10b67ab,
         type: 3}
+      propertyPath: odreUsos
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055878903755661288, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
       propertyPath: forceJump
       value: 500
       objectReference: {fileID: 0}
