@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -795,7 +795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15.000002}
+  m_AnchoredPosition: {x: 0, y: -15.000006}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160262180
@@ -13334,6 +13334,7 @@ GameObject:
   - component: {fileID: 1816711375}
   - component: {fileID: 1816711377}
   - component: {fileID: 1816711378}
+  - component: {fileID: 1816711379}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -13398,6 +13399,18 @@ MonoBehaviour:
   force: 0.01
   levelName: Fase2-level2
   img: {fileID: 1221956382}
+--- !u!114 &1816711379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816711374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90328836e0ff5842b5ca7c689677533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1845645251
 GameObject:
   m_ObjectHideFlags: 0
@@ -19354,7 +19367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15.000002}
+  m_AnchoredPosition: {x: 0, y: -15.000006}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050964369
