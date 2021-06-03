@@ -11,11 +11,13 @@ public class EnemyMeleeJ : MonoBehaviour
     public float lineOfSite;
     Animator anim;
     public int count;
+    public SpriteRenderer sprite;
 
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
     // Start is called before the first frame update
     void Start()
@@ -75,6 +77,7 @@ public class EnemyMeleeJ : MonoBehaviour
         if (collision.CompareTag("Tiro"))
         {
             life--;
+            StartCoroutine(TomarDano());
         }
 
         /*if (life <= 0)
@@ -84,7 +87,12 @@ public class EnemyMeleeJ : MonoBehaviour
         }*/
     }
 
-
+    IEnumerator TomarDano()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        sprite.color = Color.white;
+    }
 
     private void Contador()
     {

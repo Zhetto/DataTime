@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     public Text textoL;
     public Text textoO;
     public Text textoBarraca;
+    SpriteRenderer sprite;
 
 
     private void Awake()
@@ -77,6 +78,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        sprite = GetComponent<SpriteRenderer>();
+
         testeLaranjas = laranjaUsos;
         if (textoL != null && textoO != null)
         {
@@ -188,6 +191,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Inimigo"))
         {
+            StartCoroutine(TomarDano());
             vida.Dano();
         }
     }
@@ -272,6 +276,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    IEnumerator TomarDano()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        sprite.color = Color.white;
+    }
     private void Fire()
     {
         GameObject obj = ObjectPooler.current.GetPooledObject();
