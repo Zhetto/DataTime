@@ -12,12 +12,15 @@ public class EnemyMeleeJ : MonoBehaviour
     Animator anim;
     public int count;
     public SpriteRenderer sprite;
+    public PlayerController contador;
+    AudioSource ataque;
 
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        ataque = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -70,7 +73,7 @@ public class EnemyMeleeJ : MonoBehaviour
                 EnemyController.spawnedEnemys--;
                 EnemyController.diedEnemys++;
             }
-            Contador();
+            //Contador();
             Destroy(this.gameObject);
         }
 
@@ -94,8 +97,13 @@ public class EnemyMeleeJ : MonoBehaviour
         sprite.color = Color.white;
     }
 
+    public void Atacar()
+    {
+        ataque.Play();
+    }
+
     private void Contador()
     {
-        count++;
+        contador.inimigoCount += 1 ;
     }
 }

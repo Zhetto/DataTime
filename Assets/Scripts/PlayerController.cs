@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public Transform firePosition;
     public int odreUsos;
     public float fireRate;
-    public EnemyMeleeJ inimigoCount;
+    public int inimigoCount;
     public bool temOdre = false;
     public bool pegouOdre;
     public static int laranjaUsos = 0;
@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     public Text textoBarraca;
     SpriteRenderer sprite;
     AudioSource dano;
+    public EnemyMeleeJ atk;
 
 
     private void Awake()
@@ -81,6 +82,7 @@ public class PlayerController : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
+        atk = GameObject.FindGameObjectWithTag("Inimigo").GetComponent<EnemyMeleeJ>();
 
         testeLaranjas = laranjaUsos;
         if (textoL != null && textoO != null)
@@ -196,6 +198,7 @@ public class PlayerController : MonoBehaviour
             dano.Play();
             StartCoroutine(TomarDano());
             vida.Dano();
+            atk.Atacar();
         }
     }
 
@@ -254,7 +257,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Egito2");
         }
 
-        if (collision.CompareTag("Saida2") && inimigoCount.count == 0)
+        if (collision.CompareTag("Saida2") && inimigoCount == 0)
         {
             SceneManager.LoadScene("Egito3");
         }
