@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagicItem : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MagicItem : MonoBehaviour
     SpriteRenderer sprite;
     [SerializeField]float colorForce;
     Color color;
+    [SerializeField] Text text;
     [SerializeField] GameObject uiEnemy, enemyController, platforms;
     // Start is called before the first frame update
     void Start()
@@ -20,13 +22,7 @@ public class MagicItem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (active)
-        {
-            if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)))
-            {
-                collect = true;
-            }
-        }
+
 
         if (collect)
         {
@@ -42,11 +38,23 @@ public class MagicItem : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (active)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                collect = true;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             active = true;
+            text.text = "Pressione E para coletar o item";
         }
     }
 
@@ -55,6 +63,7 @@ public class MagicItem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             active = false;
+            text.text = "";
         }
     }
 }

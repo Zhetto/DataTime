@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Room : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Room : MonoBehaviour
     Vector3 initialPosition;
     [SerializeField] SpriteRenderer chair;
     [SerializeField] float forceColor, forceExpand,limitExpandMax,limitExpandMin,forceGo;
+    [SerializeField] Text text;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,14 +24,8 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)) && show)
-        {
-            go = true;
-            chair.enabled = false;
-        }
         if (go)
-        {
-            
+        {            
             if (show)
             {
                 cam.GetComponent<MoveCamera>().enabled = false;
@@ -72,13 +68,23 @@ public class Room : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && show)
+        {
+            go = true;
+            chair.enabled = false;
+            text.text = "";
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             initialPosition = cam.transform.position;
-            show = true;           
-            
+            show = true;
+            text.text = "Pressione E para entrar no quarto";
         }
     }
 
@@ -89,6 +95,7 @@ public class Room : MonoBehaviour
             Debug.Log("Saiu do quarto");
             show = false;            
             chair.enabled = true;
+            text.text = "";
         }
     }
 }

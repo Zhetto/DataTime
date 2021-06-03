@@ -8,6 +8,7 @@ public class Bed : MonoBehaviour
     [SerializeField] Image cover;
     bool active,sleep;
     float time;
+    [SerializeField] Text text;
     [SerializeField] GameObject artefact;
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,6 @@ public class Bed : MonoBehaviour
     {
         if (active)
         {
-            if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)) && time==0)
-            {
-                sleep = true;
-                time = Time.time;
-            }
 
             if (sleep)
             {
@@ -48,11 +44,24 @@ public class Bed : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (active)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && time == 0)
+            {
+                sleep = true;
+                time = Time.time;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             active = true;
+            text.text = "Pressione E para dormir";
         }        
     }
 
@@ -61,6 +70,7 @@ public class Bed : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             active = false;
+            text.text = "";
         }
     }
 }
