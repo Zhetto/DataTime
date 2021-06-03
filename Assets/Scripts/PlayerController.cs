@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Fire", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0)
+        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0 && life < 3)
         {
             laranjaUsos--;
             vida.RecuperaVida();
