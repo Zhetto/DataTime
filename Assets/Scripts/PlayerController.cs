@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 dLeft;
     public GameObject projectile;
     public Transform firePosition;
-    public int odreUsos = 3;
+    public int odreUsos;
     public float fireRate;
     public EnemyMeleeJ inimigoCount;
     public bool temOdre = false;
@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     GameObject jumpFx;
     public GameObject dialogo;
     public Text textoL;
+    public Text textoO;
 
 
     private void Awake()
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
         dialogo = GameObject.FindGameObjectWithTag("Dialogo");
         pegouLaranjas = false;
         textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
+        textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
     }
 
 
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
     {
         testeLaranjas = laranjaUsos;
         textoL.text = testeLaranjas.ToString();
+        textoO.text = odreUsos.ToString();
 
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
@@ -220,6 +223,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Odre"))
         {
             temOdre = true;
+            odreUsos = 3;
         }
 
         if (collision.CompareTag("Saida1"))

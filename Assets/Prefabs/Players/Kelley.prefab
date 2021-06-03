@@ -156,14 +156,17 @@ MonoBehaviour:
   projectile: {fileID: 2348737409916590242, guid: f32e9ddb5107ee440978300f1aaefdd5,
     type: 3}
   firePosition: {fileID: 1055878902661709646}
-  odreUsos: 3
+  odreUsos: 0
   fireRate: 0.5
   inimigoCount: {fileID: 8998647026909744660, guid: a4a942992db03334bb4b5591480ba566,
     type: 3}
   temOdre: 0
-  temLaranja: 0
-  laranjaUsos: 0
+  testeLaranjas: 0
+  pegouLaranjas: 0
   jumpFx: {fileID: 4117134515519056849, guid: 6e44fc0eecbf8494c858f7827857c29d, type: 3}
+  dialogo: {fileID: 0}
+  textoL: {fileID: 0}
+  textoO: {fileID: 0}
 --- !u!50 &1055878903755661294
 Rigidbody2D:
   serializedVersion: 4

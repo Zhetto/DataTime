@@ -23,6 +23,7 @@ TagManager:
   - Odre
   - Dialogo
   - TextoL
+  - TextoO
   layers:
   - Default
   - TransparentFX
