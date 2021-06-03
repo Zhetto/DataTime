@@ -22,6 +22,7 @@ TagManager:
   - Saida2
   - Odre
   - Dialogo
+  - TextoL
   layers:
   - Default
   - TransparentFX

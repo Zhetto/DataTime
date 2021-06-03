@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         dialogo = GameObject.FindGameObjectWithTag("Dialogo");
         pegouLaranjas = false;
+        textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
     }
 
 
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         testeLaranjas = laranjaUsos;
+        textoL.text = testeLaranjas.ToString();
 
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
@@ -238,7 +240,6 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Laranja"))
         {
             laranjaUsos++;
-            textoL.text = testeLaranjas.ToString();
             Debug.Log("Laranja add");
         }
 
