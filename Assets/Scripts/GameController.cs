@@ -33,11 +33,16 @@ public class GameController : MonoBehaviour
         KeyPause = (KeyCode)PlayerPrefs.GetInt("KeyPause");
         KeyResume = (KeyCode)PlayerPrefs.GetInt("KeyResume");
         Volume = PlayerPrefs.GetFloat("Volume");
+        if (playerDefault != null)
+        {
+            playerChoice = playerDefault;
+        }
     }
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Egito2" || SceneManager.GetActiveScene().name == "Egito3")
+
+        if (SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Egito2" || SceneManager.GetActiveScene().name == "Egito3" || SceneManager.GetActiveScene().name == "Lab-Final")
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (playerChoice == null)

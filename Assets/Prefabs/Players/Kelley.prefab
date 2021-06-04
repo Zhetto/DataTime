@@ -60,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055878903755661300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -500, y: 500, z: 0}
+  m_LocalPosition: {x: 0, y: 500, z: 0}
   m_LocalScale: {x: 0.06, y: 0.06, z: 1}
   m_Children:
   - {fileID: 1055878902661709646}
@@ -161,12 +161,14 @@ MonoBehaviour:
   inimigoCount: {fileID: 8998647026909744660, guid: a4a942992db03334bb4b5591480ba566,
     type: 3}
   temOdre: 0
+  pegouOdre: 0
   testeLaranjas: 0
   pegouLaranjas: 0
   jumpFx: {fileID: 4117134515519056849, guid: 6e44fc0eecbf8494c858f7827857c29d, type: 3}
   dialogo: {fileID: 0}
   textoL: {fileID: 0}
   textoO: {fileID: 0}
+  textoBarraca: {fileID: 0}
 --- !u!50 &1055878903755661294
 Rigidbody2D:
   serializedVersion: 4

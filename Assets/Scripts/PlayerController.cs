@@ -66,10 +66,13 @@ public class PlayerController : MonoBehaviour
         dialogo = GameObject.FindGameObjectWithTag("Dialogo");
         pegouLaranjas = false;
         pegouOdre = false;
-        textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
-        textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
-        textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
-        textoBarraca.gameObject.SetActive(false);
+        if (textoO != null && textoL != null)
+        {
+            textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
+            textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
+            textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
+            textoBarraca.gameObject.SetActive(false);
+        }
     }
 
 
