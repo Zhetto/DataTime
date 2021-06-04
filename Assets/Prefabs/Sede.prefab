@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 3689419355530298644}
   m_Layer: 5
   m_Name: Sede
-  m_TagString: Untagged
+  m_TagString: BarraSede
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
