@@ -90,6 +90,14 @@ public class EnemyMeleeJ : MonoBehaviour
         }*/
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            ataque.Play();
+        }
+    }
+
     IEnumerator TomarDano()
     {
         sprite.color = Color.red;

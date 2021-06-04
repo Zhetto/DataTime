@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
     public Text textoBarraca;
     SpriteRenderer sprite;
     AudioSource dano;
-    public EnemyMeleeJ atk;
 
 
     private void Awake()
@@ -82,7 +81,6 @@ public class PlayerController : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
-        atk = GameObject.FindGameObjectWithTag("Inimigo").GetComponent<EnemyMeleeJ>();
 
         testeLaranjas = laranjaUsos;
         if (textoL != null && textoO != null)
@@ -198,7 +196,6 @@ public class PlayerController : MonoBehaviour
             dano.Play();
             StartCoroutine(TomarDano());
             vida.Dano();
-            atk.Atacar();
         }
     }
 
