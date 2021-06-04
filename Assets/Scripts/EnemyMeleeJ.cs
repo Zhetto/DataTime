@@ -11,11 +11,16 @@ public class EnemyMeleeJ : MonoBehaviour
     public float lineOfSite;
     Animator anim;
     public int count;
+    public SpriteRenderer sprite;
+    public PlayerController contador;
+    AudioSource ataque;
 
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        ataque = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -68,13 +73,14 @@ public class EnemyMeleeJ : MonoBehaviour
                 EnemyController.spawnedEnemys--;
                 EnemyController.diedEnemys++;
             }
-            Contador();
+            //Contador();
             Destroy(this.gameObject);
         }
 
         if (collision.CompareTag("Tiro"))
         {
             life--;
+            StartCoroutine(TomarDano());
         }
 
         /*if (life <= 0)
@@ -84,10 +90,28 @@ public class EnemyMeleeJ : MonoBehaviour
         }*/
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            ataque.Play();
+        }
+    }
 
+    IEnumerator TomarDano()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        sprite.color = Color.white;
+    }
+
+    public void Atacar()
+    {
+        ataque.Play();
+    }
 
     private void Contador()
     {
-        count++;
+        contador.inimigoCount += 1 ;
     }
 }

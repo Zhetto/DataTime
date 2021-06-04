@@ -25,6 +25,9 @@ TagManager:
   - TextoL
   - TextoO
   - TextoBarraca
+  - Porta
+  - BarraVida
+  - BarraSede
   layers:
   - Default
   - TransparentFX

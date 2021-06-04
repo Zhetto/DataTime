@@ -53,6 +53,6 @@ public class Checkpoint : MonoBehaviour
     {
         Debug.Log("Resetou");
         PlayerPrefs.SetInt("restLife", 3);
-        PlayerPrefs.SetString("lastLevelName", "Egito1");
+        PlayerPrefs.SetString("lastLevelName", "Lab-01");
     }
 }

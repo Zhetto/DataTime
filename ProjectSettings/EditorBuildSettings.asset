@@ -21,9 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Egito3.unity
     guid: 7953fe154df69d0419bec41f66d68951
   - enabled: 1
+    path: Assets/Scenes/Lab-02.unity
+    guid: b6f71a2860722dc4eabeb2f1f22b99df
+  - enabled: 1
     path: Assets/Scenes/Fase2-level1.unity
     guid: 762ec7c52026bd74a86a0c65c5be7e1d
   - enabled: 1
     path: Assets/Scenes/Fase2-level2.unity
     guid: b21a3335fc6ed3b48947d2a94f0be87f
+  - enabled: 1
+    path: Assets/Scenes/Fase2-level3.unity
+    guid: c9b176986cfa46d49991dcf84e32e278
+  - enabled: 1
+    path: Assets/Scenes/Lab-Final.unity
+    guid: cb5a67454efe4d544a55c1c4a64bebc3
   m_configObjects: {}

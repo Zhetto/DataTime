@@ -114,5 +114,15 @@ PrefabInstance:
       propertyPath: qntSede
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 7434202108719527667, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f18c150f76b956f43b4c77201e4fb95c, type: 3}
+    - target: {fileID: 7434202108719527667, guid: 7ea09d701319839439efe417f10b67ab,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea09d701319839439efe417f10b67ab, type: 3}

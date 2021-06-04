@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public Transform firePosition;
     public int odreUsos;
     public float fireRate;
-    public EnemyMeleeJ inimigoCount;
+    public int inimigoCount;
     public bool temOdre = false;
     public bool pegouOdre;
     public static int laranjaUsos = 0;
@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     public Text textoL;
     public Text textoO;
     public Text textoBarraca;
+    SpriteRenderer sprite;
+    AudioSource dano;
 
 
     private void Awake()
@@ -66,13 +68,10 @@ public class PlayerController : MonoBehaviour
         dialogo = GameObject.FindGameObjectWithTag("Dialogo");
         pegouLaranjas = false;
         pegouOdre = false;
-        if (textoO != null && textoL != null)
-        {
-            textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
-            textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
-            textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
-            textoBarraca.gameObject.SetActive(false);
-        }
+        textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
+        textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
+        textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
+        textoBarraca.gameObject.SetActive(false);
     }
 
 
@@ -80,12 +79,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        sprite = GetComponent<SpriteRenderer>();
+        dano = GetComponent<AudioSource>();
+
         testeLaranjas = laranjaUsos;
-        if (textoL != null && textoO != null)
-        {
-            textoL.text = testeLaranjas.ToString();
-            textoO.text = odreUsos.ToString();
-        }
+
+        textoL.text = testeLaranjas.ToString();
+        textoO.text = odreUsos.ToString();
 
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
@@ -164,7 +164,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Fire", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0 && life < 3)
+        if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0)
         {
             laranjaUsos--;
             vida.RecuperaVida();
@@ -191,6 +191,8 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Inimigo"))
         {
+            dano.Play();
+            StartCoroutine(TomarDano());
             vida.Dano();
         }
     }
@@ -250,8 +252,9 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Egito2");
         }
 
-        if (collision.CompareTag("Saida2") && inimigoCount.count == 0)
+        if (collision.CompareTag("Saida2") && inimigoCount == 0)
         {
+            temOdre = false;
             SceneManager.LoadScene("Egito3");
         }
 
@@ -275,6 +278,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    IEnumerator TomarDano()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.25f);
+        sprite.color = Color.white;
+    }
     private void Fire()
     {
         GameObject obj = ObjectPooler.current.GetPooledObject();

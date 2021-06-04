@@ -18,10 +18,11 @@ public class ControleBarrasJ : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Egito2")
         {
-            qntSede = 20;
+            qntSede = 30;
         }
-        vidaSlidder = GameObject.FindObjectsOfType<Slider>()[1];
-        sedeSlider = GameObject.FindObjectsOfType<Slider>()[0];
+
+        vidaSlidder = GameObject.FindGameObjectWithTag("BarraVida").GetComponent<Slider>();
+        sedeSlider = GameObject.FindGameObjectWithTag("BarraSede").GetComponent<Slider>();
         vidaSlidder.value = qntVida;
         sedeSlider.value = qntSede;
         sedeSlider.maxValue = qntSede;
@@ -51,7 +52,7 @@ public class ControleBarrasJ : MonoBehaviour
         {
             odre.odreUsos --;
             Debug.Log(odre.odreUsos);
-            tempoSede = 20;
+            tempoSede = 30;
         }
     }
 
