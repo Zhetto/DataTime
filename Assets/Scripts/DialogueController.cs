@@ -27,7 +27,7 @@ public class DialogueController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             DisplayNextSentence();
         }
