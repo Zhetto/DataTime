@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
         textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
         textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
         textoBarraca.gameObject.SetActive(false);
-      
     }
 
 
@@ -86,7 +85,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
 
@@ -190,7 +188,6 @@ public class PlayerController : MonoBehaviour
             vida.RecuperaVida();
             life++;
         }
-
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
