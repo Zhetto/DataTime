@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
         KeyPause = (KeyCode)PlayerPrefs.GetInt("KeyPause");
         KeyResume = (KeyCode)PlayerPrefs.GetInt("KeyResume");
         Volume = PlayerPrefs.GetFloat("Volume");
-        if (playerDefault != null)
+        if (playerDefault != null && playerChoice == null)
         {
             playerChoice = playerDefault;
         }

@@ -130,7 +130,8 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(0, forceJump));
             this.jump = false;
             anim.SetBool("Jump", true);
-            Instantiate(jumpFx, this.transform.position - Vector3.up * 1.35f, new Quaternion(0, 0, 0, 0));
+            GameObject fx = Instantiate(jumpFx, this.transform.position - Vector3.up * 1.35f, this.transform.rotation);
+            fx.transform.Rotate(Vector3.right * -90);
         }
 
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.upKey)) && climb)
@@ -140,7 +141,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)) && fireRate > 0.5)
         {
-            Fire();
+            //Fire();
             fireRate = 0f;
             anim.SetBool("Fire", true);
         }

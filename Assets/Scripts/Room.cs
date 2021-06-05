@@ -62,7 +62,10 @@ public class Room : MonoBehaviour
                 else
                 {
                     cam.GetComponent<MoveCamera>().enabled = true;
-                    go = false;
+                    if (sprite.color.a <= 0)
+                    {
+                        go = false;
+                    }
                 }
             }
         }
@@ -75,6 +78,7 @@ public class Room : MonoBehaviour
             go = true;
             chair.enabled = false;
             text.text = "";
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 
@@ -96,6 +100,7 @@ public class Room : MonoBehaviour
             show = false;            
             chair.enabled = true;
             text.text = "";
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Bed : MonoBehaviour
 {
-    [SerializeField] Image cover;
+    [SerializeField] GameObject cover;
     bool active,sleep;
     float time;
     [SerializeField] Text text;
@@ -26,19 +26,13 @@ public class Bed : MonoBehaviour
             {
                 if (Time.time >= time+5)
                 {
-                    //Debug.Log("diminuir opacidade");
-                    cover.color -= new Color(0, 0, 0, 0001f);
-                    if(cover.color.a <= 0)
-                    {
-                        artefact.SetActive(true);
-                        Destroy(this);
-                        //Debug.Log("Acordou");
-                    }
+                    cover.SetActive(false);
+                    artefact.SetActive(true);
                 }
                 else
                 {
                     //Debug.Log("aumentar opacidade");
-                    cover.color += new Color(0, 0, 0, 0001f);
+                    cover.SetActive(true) ;
                 }
             }
         }
