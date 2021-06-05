@@ -15,7 +15,7 @@ public class OpenMap : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
         opened = Input.GetKeyDown(KeyCode.M) ? !opened : opened ;
         if (opened)

@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     public Text textoBarraca;
     SpriteRenderer sprite;
     AudioSource dano;
+    Vector2 mousePosition;
 
 
     private void Awake()
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
 
@@ -86,6 +88,17 @@ public class PlayerController : MonoBehaviour
 
         textoL.text = testeLaranjas.ToString();
         textoO.text = odreUsos.ToString();
+
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if(mousePosition.x > this.transform.position.x)
+        {
+            transform.localScale = dRight;
+        }
+        else
+        {
+            transform.localScale = dLeft;
+        }
 
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.rightKey)))
         {
@@ -291,8 +304,9 @@ public class PlayerController : MonoBehaviour
         if (obj == null) return;
         obj.GetComponent<ProjectileControllerJ>().Atirando(transform);
         obj.transform.position = firePosition.position;
-        obj.transform.rotation = firePosition.rotation;
-        obj.transform.localScale = new Vector3(this.transform.localScale.x < 0 ? -6 : 6,obj.transform.localScale.y, obj.transform.localScale.z);
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        obj.transform.right = (mousePosition - (Vector2)transform.position).normalized;
+        //obj.transform.localScale = new Vector3(this.transform.localScale.x < 0 ? -6 : 6,obj.transform.localScale.y, obj.transform.localScale.z);
         obj.SetActive(true);
     }
 }
