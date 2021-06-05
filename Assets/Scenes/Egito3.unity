@@ -2377,6 +2377,7 @@ MonoBehaviour:
     m_Bits: 512
   box: {fileID: 1129822717}
   vida: 0
+  bossMorto: 0
 --- !u!50 &490787988
 Rigidbody2D:
   serializedVersion: 4
@@ -12250,22 +12251,22 @@ PrefabInstance:
     - target: {fileID: 4747126779658713801, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000001
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 4747126779720164680, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000141
+      value: -15.000122
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780044518783, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000001
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780098984451, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000141
+      value: -15.000122
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780452196872, guid: 15a63f8c466619045995881b0856db34,
         type: 3}

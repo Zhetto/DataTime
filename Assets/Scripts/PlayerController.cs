@@ -47,9 +47,13 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        if (SceneManager.GetActiveScene().name == "Egito3")
+        {
+            boss = GameObject.FindGameObjectWithTag("BossDeserto").GetComponent<BossDeserto>();
+        }
         //this.gameObject.AddComponent<Rigidbody2D>();
         //this.gameObject.AddComponent<BoxCollider2D>();
-        boss = GameObject.FindGameObjectWithTag("BossDeserto").GetComponent<BossDeserto>();
+       
     }
     // Start is called before the first frame update
     void Start()
