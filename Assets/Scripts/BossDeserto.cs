@@ -31,10 +31,14 @@ public class BossDeserto : MonoBehaviour
     private bool goingUp = true;
     private bool facingLeft = true;
     private Animator enemyAnim;
+    public BoxCollider2D box;
+    public int vida;
+    public bool bossMorto = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        vida = 5;
         idleMoveDirection.Normalize();
         attackMoveDirection.Normalize();
         enemyRB = GetComponent<Rigidbody2D>();
@@ -57,6 +61,12 @@ public class BossDeserto : MonoBehaviour
             AttackPlayer();
         }
         FlipTowardsPlayer();
+
+        if (vida <= 0)
+        {
+            bossMorto = true;
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -176,5 +186,13 @@ public class BossDeserto : MonoBehaviour
         idleMoveDirection.x *= -1;
         attackMoveDirection.x *= -1;
         transform.Rotate(0, 180, 0);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Tiro"))
+        {
+            vida--;
+        }
     }
 }

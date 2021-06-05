@@ -42,13 +42,14 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer sprite;
     AudioSource dano;
     Vector2 mousePosition;
+    public BossDeserto boss;
 
 
     private void Awake()
     {
         //this.gameObject.AddComponent<Rigidbody2D>();
         //this.gameObject.AddComponent<BoxCollider2D>();
-
+        boss = GameObject.FindGameObjectWithTag("BossDeserto").GetComponent<BossDeserto>();
     }
     // Start is called before the first frame update
     void Start()
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
         textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
         textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
         textoBarraca.gameObject.SetActive(false);
+      
     }
 
 
@@ -80,7 +82,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
 
@@ -203,7 +205,7 @@ public class PlayerController : MonoBehaviour
                 this.platform = null;
             }
         }
-        if (collision.gameObject.CompareTag("Inimigo"))
+        if (collision.gameObject.CompareTag("Inimigo") || collision.gameObject.CompareTag("BossDeserto"))
         {
             dano.Play();
             StartCoroutine(TomarDano());
@@ -272,9 +274,9 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Egito3");
         }
 
-        if (collision.CompareTag("Saida3"))
+        if (collision.CompareTag("Saida3") && boss.bossMorto == true)
         {
-            SceneManager.LoadScene("Fase2-level1");
+            SceneManager.LoadScene("Lab-02");
         }
 
         if (collision.CompareTag("Laranja"))
