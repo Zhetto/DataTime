@@ -22,17 +22,17 @@ AnimationClip:
     - time: 0
       value: {fileID: 6857328370665264379, guid: c3285598db81ef14cb76eec3f75ea96a,
         type: 3}
-    - time: 0.1
+    - time: 0.125
       value: {fileID: -5147528066248551837, guid: c3285598db81ef14cb76eec3f75ea96a,
         type: 3}
-    - time: 0.2
+    - time: 0.5
       value: {fileID: -3345850332179862387, guid: c3285598db81ef14cb76eec3f75ea96a,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -55,7 +55,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.3
+    m_StopTime: 0.625
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -75,7 +75,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.1
+  - time: 0.125
     functionName: Fire
     data: 
     objectReferenceParameter: {fileID: 1055878903755661300, guid: 7ea09d701319839439efe417f10b67ab,

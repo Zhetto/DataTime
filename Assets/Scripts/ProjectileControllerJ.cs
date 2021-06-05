@@ -12,14 +12,15 @@ public class ProjectileControllerJ : MonoBehaviour
     {
         if (rb != null)
         {
-            if (escala > 0)
-            {
-                rb.velocity = Vector3.right * projectileSpeed;
-            }
-            else if (escala < 0)
-            {
-                rb.velocity = Vector3.left * projectileSpeed;
-            }
+            //if (escala > 0)
+            //{
+                rb.velocity = (this.transform.right).normalized *projectileSpeed;
+            //}
+            //else if (escala < 0)
+            //{
+            //    rb.velocity = Vector3.left * projectileSpeed;
+            //}
+            Debug.Log("Direção da bala");
 
         }
     }

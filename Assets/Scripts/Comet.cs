@@ -19,7 +19,7 @@ public class Comet : MonoBehaviour
         
         time = 0;
         delay = 5;
-        player = GameObject.FindGameObjectWithTag("Player");
+        
         comet = this.gameObject.transform.GetChild(0).gameObject;
         explosion = this.gameObject.transform.GetChild(1).gameObject;
         camController = FindObjectOfType<Camera>().GetComponent<CameraController>();
@@ -29,6 +29,7 @@ public class Comet : MonoBehaviour
     {
         if(time!=0)
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             if (Time.time < time + delay)
             {
                 //Debug.Log("O personagem ainda não pode se mover");
@@ -55,6 +56,7 @@ public class Comet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
+            player = GameObject.FindGameObjectWithTag("Player");
             camController.enabled = true;
             Destroy(comet);
             explosion.SetActive(true);
