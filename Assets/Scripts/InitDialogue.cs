@@ -17,6 +17,7 @@ public class InitDialogue : MonoBehaviour
         {
             controller.initial = Kelley;
         }
+        controller.StartDialogue();
     }
 
     // Update is called once per frame
