@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
         textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
         textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
         textoBarraca.gameObject.SetActive(false);
-      
     }
 
 
@@ -86,7 +85,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
 
@@ -158,8 +156,9 @@ public class PlayerController : MonoBehaviour
             this.transform.position += new Vector3(0, speedClimb * Time.deltaTime, 0);
         }
 
-        if (Input.GetKeyDown(GameController.getKeyCode(LoadControl.Control.resumeKey)) && fireRate > 0.5)
+        if (Input.GetMouseButton(0) && fireRate > 0.5)
         {
+            Debug.Log("Clicou");
             //Fire();
             fireRate = 0f;
             anim.SetBool("Fire", true);
@@ -179,7 +178,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Walk", false);
         }
 
-        if (Input.GetKeyUp(GameController.getKeyCode(LoadControl.Control.resumeKey)))
+        if (Input.GetMouseButtonUp(0))
         {
             anim.SetBool("Fire", false);
         }
@@ -190,7 +189,6 @@ public class PlayerController : MonoBehaviour
             vida.RecuperaVida();
             life++;
         }
-
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

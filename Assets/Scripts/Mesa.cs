@@ -26,6 +26,7 @@ public class Mesa : MonoBehaviour
                 //Fechar o puzzle
                 opened = false;
                 puzzleAnimator.SetBool("open", false);
+                Cursor.visible = false;
             }
             else
             {
@@ -33,6 +34,7 @@ public class Mesa : MonoBehaviour
                 opened = true;
                 Debug.Log("Open Puzzle");
                 puzzleAnimator.SetBool("open", true);
+                Cursor.visible = true;
             }
         }
     }

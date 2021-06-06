@@ -48,7 +48,7 @@ public class ControleBarrasJ : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && odre.temOdre == true && odre.odreUsos > 0)
+        if (Input.GetKeyDown(KeyCode.F) && odre.temOdre == true && odre.odreUsos > 0)
         {
             odre.odreUsos --;
             Debug.Log(odre.odreUsos);

@@ -24,9 +24,13 @@ public class Checkpoint : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Menu")
         {
+            
             Debug.Log("Antes RestLife: " + restLife + " lastLevelName: " + lastLevelName);
             alterLastLevelName(SceneManager.GetActiveScene().name);
             Debug.Log("Depois RestLife: " + restLife + " lastLevelName: " + lastLevelName);
+        }else if(SceneManager.GetActiveScene().name == "Menu" || SceneManager.GetActiveScene().name == "Lab-Final")
+        {
+            Cursor.visible = true;
         }
     }
 
