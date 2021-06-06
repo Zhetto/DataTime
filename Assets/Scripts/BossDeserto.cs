@@ -33,13 +33,13 @@ public class BossDeserto : MonoBehaviour
     private Animator enemyAnim;
     public BoxCollider2D box;
     public int vida;
-    public bool bossMorto = false;
+    public static bool bossMorto = false;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        vida = 5;
+        vida = 23;
         idleMoveDirection.Normalize();
         attackMoveDirection.Normalize();
         enemyRB = GetComponent<Rigidbody2D>();
@@ -150,7 +150,7 @@ public class BossDeserto : MonoBehaviour
 
     public void randomStatePicker()
     {
-        int randomState = Random.Range(1, 2);
+        int randomState = Random.Range(0, 2);
 
         if(randomState == 0)
         {
