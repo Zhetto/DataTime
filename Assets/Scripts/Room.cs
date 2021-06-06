@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class Room : MonoBehaviour
 {
     SpriteRenderer sprite;
+    [SerializeField] SpriteRenderer madame;
     public bool show,go;
     Camera cam;
     Vector3 initialPosition;
     [SerializeField] SpriteRenderer chair;
     [SerializeField] float forceColor, forceExpand,limitExpandMax,limitExpandMin,forceGo;
     [SerializeField] Text text;
+    [SerializeField] GameObject[] objects;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,11 @@ public class Room : MonoBehaviour
                 {
                     sprite.color += new Color(0, 0, 0, forceColor);
                 }
+
+                if (madame.color.a < 1)
+                {
+                    madame.color += new Color(0, 0, 0, forceColor);
+                }
                 if (cam.orthographicSize > limitExpandMin)
                 {
                     cam.orthographicSize -= forceExpand;
@@ -49,6 +56,10 @@ public class Room : MonoBehaviour
                 if (sprite.color.a > 0)
                 {
                     sprite.color -= new Color(0, 0, 0, forceColor);
+                }
+                if (madame.color.a > 0)
+                {
+                    madame.color -= new Color(0, 0, 0, forceColor);
                 }
                 if (cam.orthographicSize < limitExpandMax)
                 {
@@ -79,6 +90,10 @@ public class Room : MonoBehaviour
             chair.enabled = false;
             text.text = "";
             this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            foreach(GameObject item in objects)
+            {
+                item.SetActive(false);
+            }
         }
     }
 
@@ -96,6 +111,10 @@ public class Room : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            foreach (GameObject item in objects)
+            {
+                item.SetActive(true);
+            }
             Debug.Log("Saiu do quarto");
             show = false;            
             chair.enabled = true;

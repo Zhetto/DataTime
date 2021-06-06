@@ -26,11 +26,13 @@ public class Bed : MonoBehaviour
             {
                 if (Time.time >= time+5)
                 {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
                     cover.SetActive(false);
                     artefact.SetActive(true);
                 }
                 else
                 {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
                     //Debug.Log("aumentar opacidade");
                     cover.SetActive(true) ;
                 }
