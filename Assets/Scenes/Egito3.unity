@@ -207,7 +207,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822781, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: lineOfSite
-      value: 10
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ebdcd10b0d9444bb5e606161494494, type: 3}
@@ -241,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822778, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.53
+      value: 27.36
       objectReference: {fileID: 0}
     - target: {fileID: 7190779332603822778, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
@@ -291,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822781, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: lineOfSite
-      value: 10
+      value: 14.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ebdcd10b0d9444bb5e606161494494, type: 3}
@@ -3045,7 +3045,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822781, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: lineOfSite
-      value: 10
+      value: 15.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ebdcd10b0d9444bb5e606161494494, type: 3}
@@ -4021,7 +4021,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822781, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: lineOfSite
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ebdcd10b0d9444bb5e606161494494, type: 3}
@@ -6801,7 +6801,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822781, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: lineOfSite
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ebdcd10b0d9444bb5e606161494494, type: 3}
@@ -7242,7 +7242,7 @@ PrefabInstance:
     - target: {fileID: 8468337139655677995, guid: e7e136c1b0bfee349aaca3310cfb53d0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.04
+      value: 4.97
       objectReference: {fileID: 0}
     - target: {fileID: 8468337139655677995, guid: e7e136c1b0bfee349aaca3310cfb53d0,
         type: 3}
@@ -12014,7 +12014,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822778, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.67
+      value: 51.6
       objectReference: {fileID: 0}
     - target: {fileID: 7190779332603822778, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
@@ -12064,7 +12064,7 @@ PrefabInstance:
     - target: {fileID: 7190779332603822781, guid: 77ebdcd10b0d9444bb5e606161494494,
         type: 3}
       propertyPath: lineOfSite
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ebdcd10b0d9444bb5e606161494494, type: 3}
@@ -12782,22 +12782,22 @@ PrefabInstance:
     - target: {fileID: 4747126779658713801, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15
+      value: -14.999999
       objectReference: {fileID: 0}
     - target: {fileID: 4747126779720164680, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000122
+      value: -15.000118
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780044518783, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15
+      value: -14.999999
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780098984451, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000122
+      value: -15.000118
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780452196872, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
