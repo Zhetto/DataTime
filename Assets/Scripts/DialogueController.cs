@@ -59,8 +59,19 @@ public class DialogueController : MonoBehaviour
 
         Dialogue sentence = sentences.Dequeue();
         name.text = sentence.name;
-        message.text = sentence.sentences;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence.sentences));
         img.sprite = sentence.sprite;
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        message.text = "";
+        foreach(char letter in sentence.ToCharArray())
+        {
+            message.text += letter;
+            yield return .01f;
+        }
     }
 
     public void EndDialogue()

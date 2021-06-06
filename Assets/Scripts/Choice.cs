@@ -31,11 +31,13 @@ public class Choice : MonoBehaviour
     {
         if(name == "Humphrey")
         {
+            PlayerPrefs.SetString("Player","Humphrey");
             GameController.playerChoice = Humphrey;
             dialogue.initial = this.dialogueHumphrey;
         }
         else if(name == "Kelley")
         {
+            PlayerPrefs.SetString("Player", "Kelley");
             GameController.playerChoice = Kelley;
             dialogue.initial = this.dialogueKelley;
         }

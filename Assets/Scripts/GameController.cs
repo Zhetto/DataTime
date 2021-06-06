@@ -24,7 +24,12 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetInt("KeyRight", (int)KeyCode.D);
             PlayerPrefs.SetInt("KeyPause", (int)KeyCode.Escape);
             PlayerPrefs.SetInt("KeyResume", (int)KeyCode.Space);
+
+        }
+        if (!PlayerPrefs.HasKey("Volume") || !PlayerPrefs.HasKey("Player"))
+        {
             PlayerPrefs.SetFloat("Volume", 1);
+            PlayerPrefs.SetString("Player", "Nenhum");
         }
         KeyUp = (KeyCode)PlayerPrefs.GetInt("KeyUp");
         KeyDown = (KeyCode)PlayerPrefs.GetInt("KeyDown");
@@ -41,6 +46,15 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        foreach(AudioSource item in GameObject.FindObjectsOfType<AudioSource>())
+        {
+            item.volume = Volume;
+        }
+        string playerPref = PlayerPrefs.GetString("Player");
+        if (playerPref != "Nenhum")
+        {
+            playerChoice = Resources.Load(playerPref) as GameObject;
+        }
 
         if (SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Fase2-level2" || SceneManager.GetActiveScene().name == "Egito2" || SceneManager.GetActiveScene().name == "Egito3" || SceneManager.GetActiveScene().name == "Lab-Final" || SceneManager.GetActiveScene().name == "Fase2-boss")
         {
