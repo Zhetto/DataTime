@@ -24,7 +24,6 @@ TagManager:
   - Dialogo
   - TextoL
   - TextoO
-  - TextoBarraca
   - Porta
   - BarraVida
   - BarraSede
@@ -33,6 +32,7 @@ TagManager:
   - CLaranja
   - Orb
   - vidaBoss
+  - BotaoO
   layers:
   - Default
   - TransparentFX

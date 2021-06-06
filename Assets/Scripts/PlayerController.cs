@@ -38,13 +38,12 @@ public class PlayerController : MonoBehaviour
     public GameObject dialogo;
     public Text textoL;
     public Text textoO;
-    public Text textoBarraca;
     SpriteRenderer sprite;
     AudioSource dano;
     Vector2 mousePosition;
     public BossDeserto boss;
     public AudioSource consumir;
-
+    public CameraController camera;
 
     private void Awake()
     {
@@ -77,9 +76,6 @@ public class PlayerController : MonoBehaviour
         pegouOdre = false;
         textoL = GameObject.FindGameObjectWithTag("TextoL").GetComponent<Text>();
         textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
-        textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
-        textoBarraca.gameObject.SetActive(false);
-        
     }
 
 
@@ -87,6 +83,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (SceneManager.GetActiveScene().name == "Egito3")
+        {
+            camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
+        }
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
 
@@ -249,11 +249,6 @@ public class PlayerController : MonoBehaviour
             this.rb.gravityScale = 2;
             this.climb = false;
         }
-
-        if (collision.CompareTag("Odre"))
-        {
-            textoBarraca.gameObject.SetActive(false);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -265,7 +260,9 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("Odre") && pegouOdre == false)
         {
-            textoBarraca.gameObject.SetActive(true);
+            dialogo.GetComponent<DialogueController>().enabled = true;
+            anim.SetBool("Walk", false);
+            //textoBarraca.gameObject.SetActive(true);
             temOdre = true;
             odreUsos = 3;
             pegouOdre = true;
@@ -299,6 +296,15 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Walk", false);
             laranjaUsos += 3;
             pegouLaranjas = true;
+        }
+
+        if (collision.CompareTag("Porta"))
+        {
+            Camera.main.orthographicSize = 8;
+            camera.xMax = 65.5f;
+            camera.xMin = -56;
+            camera.yMax = 13;
+            camera.yMin = -13;
         }
     }
 
