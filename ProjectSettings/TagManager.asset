@@ -29,6 +29,8 @@ TagManager:
   - BarraVida
   - BarraSede
   - BossDeserto
+  - COdre
+  - CLaranja
   - Orb
   layers:
   - Default

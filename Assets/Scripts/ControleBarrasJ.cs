@@ -12,12 +12,14 @@ public class ControleBarrasJ : MonoBehaviour
     public int qntSede = 10;
     float tempoSede;
     public PlayerController odre;
+    public AudioSource consumir;
 
     // Start is called before the first frame update
     void Start()
     {
         if(SceneManager.GetActiveScene().name == "Egito2")
         {
+            consumir = GameObject.FindGameObjectWithTag("COdre").GetComponent<AudioSource>();
             qntSede = 30;
         }
 
@@ -48,8 +50,9 @@ public class ControleBarrasJ : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && odre.temOdre == true && odre.odreUsos > 0)
+        if (Input.GetKeyDown(KeyCode.F) && odre.temOdre == true && odre.odreUsos > 0)
         {
+            consumir.Play();
             odre.odreUsos --;
             Debug.Log(odre.odreUsos);
             tempoSede = 30;

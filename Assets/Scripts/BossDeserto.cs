@@ -34,15 +34,17 @@ public class BossDeserto : MonoBehaviour
     public BoxCollider2D box;
     public int vida;
     public bool bossMorto = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        vida = 5;
+        vida = 23;
         idleMoveDirection.Normalize();
         attackMoveDirection.Normalize();
         enemyRB = GetComponent<Rigidbody2D>();
-        enemyAnim = GetComponentInChildren<Animator>();
+        enemyAnim = GetComponent<Animator>();
+       
     }
 
     // Update is called once per frame
