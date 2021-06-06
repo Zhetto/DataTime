@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnedEnemys = 0;
+        diedEnemys = 0;
         totalEnemy = 3;
         maxEnemy = 10;
         StartCoroutine(spawnEnemys());

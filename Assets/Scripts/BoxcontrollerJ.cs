@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoxcontrollerJ : MonoBehaviour
 {
     EdgeCollider2D col;
+    [SerializeField] bool level3;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,15 +15,32 @@ public class BoxcontrollerJ : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (level3)
         {
-            if (this.transform.position.y > collision.gameObject.transform.position.y)
+            if (collision.gameObject.CompareTag("Player"))
             {
-                this.col.enabled = false;
+                if (this.transform.position.y > collision.gameObject.transform.position.y)
+                {
+                    this.col.enabled = false;
+                }
+                else if (this.transform.position.y-2 < collision.gameObject.transform.position.y)
+                {
+                    this.col.enabled = true;
+                }
             }
-            else if (this.transform.position.y < collision.gameObject.transform.position.y)
+        }
+        else
+        {
+            if (collision.gameObject.CompareTag("Player"))
             {
-                this.col.enabled = true;
+                if (this.transform.position.y > collision.gameObject.transform.position.y)
+                {
+                    this.col.enabled = false;
+                }
+                else if (this.transform.position.y < collision.gameObject.transform.position.y)
+                {
+                    this.col.enabled = true;
+                }
             }
         }
     }

@@ -269,7 +269,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 1
+  m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
@@ -569,13 +569,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90728411}
-  m_LocalRotation: {x: 0, y: 0, z: -0.1883241, w: 0.982107}
-  m_LocalPosition: {x: 19.44, y: -16.92, z: 0}
-  m_LocalScale: {x: 20, y: 80, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.003490679, w: 0.9999939}
+  m_LocalPosition: {x: 19.56, y: -16.77, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 981456724}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.71}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.4}
 --- !u!61 &90728413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -589,18 +589,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.015130758, y: 0.5358132}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 4.2, y: 6.92}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 3.0943527, y: 8.094478}
   m_EdgeRadius: 0
 --- !u!212 &90728414
 SpriteRenderer:
@@ -641,7 +641,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: b0712e8a207032c4e96dc00f10e20d00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7791,7 +7791,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480554436
 GameObject:
@@ -9691,7 +9691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0062500006, y: 0.7935804}
   m_AnchorMax: {x: 0.04875001, y: 0.83000004}
-  m_AnchoredPosition: {x: 67.50004, y: -4.600006}
+  m_AnchoredPosition: {x: 67.500084, y: -4.600006}
   m_SizeDelta: {x: 126, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761061783
@@ -12683,7 +12683,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.048849784, w: 0.9988062}
   m_LocalPosition: {x: -2.4, y: 54, z: 28.566782}
   m_LocalScale: {x: 0.67, y: 1, z: 10}
-  m_Children: [{fileID: 2124202782}]
+  m_Children:
+  - {fileID: 2124202782}
   m_Father: {fileID: 1587866680}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.6}
@@ -12739,9 +12740,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1530791581
-  m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 425f6c07724af204fbfc27e64a95d2d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -19984,7 +19985,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.048849784, w: 0.9988062}
   m_LocalPosition: {x: 40.5, y: 54, z: 28.566782}
   m_LocalScale: {x: 0.67, y: 1, z: 10}
-  m_Children: [{fileID: 53260204}]
+  m_Children:
+  - {fileID: 53260204}
   m_Father: {fileID: 1587866680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.6}
@@ -20040,9 +20042,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1530791581
-  m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 425f6c07724af204fbfc27e64a95d2d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -20438,7 +20440,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 1
+  m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
