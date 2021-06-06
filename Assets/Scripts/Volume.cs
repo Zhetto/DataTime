@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class Volume : MonoBehaviour
 {
     Slider sld;
-    AudioSource aud;
+    [SerializeField] AudioSource aud;
     // Start is called before the first frame update
     void Start()
     {
-        aud = GameObject.FindObjectOfType<AudioSource>();
         sld = this.GetComponent<Slider>();
         sld.value = GameController.Volume;
     }

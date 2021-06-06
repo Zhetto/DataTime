@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -466,7 +466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.007500001, y: 0.832}
   m_AnchorMax: {x: 0.035, y: 0.86}
-  m_AnchoredPosition: {x: 69.000305, y: -6.700012}
+  m_AnchoredPosition: {x: 69.000275, y: -6.700012}
   m_SizeDelta: {x: 138, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119697974
@@ -2761,11 +2761,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7dc019a3ac462104b8c3ce48be1454cc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -12808,6 +12808,11 @@ PrefabInstance:
     - target: {fileID: 3689419355441153729, guid: 65199931d2dabc04aa975f29146cac22,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689419355441153729, guid: 65199931d2dabc04aa975f29146cac22,
+        type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3689419355441153734, guid: 65199931d2dabc04aa975f29146cac22,
