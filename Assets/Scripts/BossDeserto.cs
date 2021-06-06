@@ -150,7 +150,7 @@ public class BossDeserto : MonoBehaviour
 
     public void randomStatePicker()
     {
-        int randomState = Random.Range(0, 2);
+        int randomState = Random.Range(1, 2);
 
         if(randomState == 0)
         {

@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     AudioSource dano;
     Vector2 mousePosition;
     public BossDeserto boss;
+    public AudioSource consumir;
 
 
     private void Awake()
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
         textoO = GameObject.FindGameObjectWithTag("TextoO").GetComponent<Text>();
         textoBarraca = GameObject.FindGameObjectWithTag("TextoBarraca").GetComponent<Text>();
         textoBarraca.gameObject.SetActive(false);
+        
     }
 
 
@@ -185,6 +187,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q) && laranjaUsos > 0 && vida.vidaSlidder.value < 3)
         {
+            consumir = GameObject.FindGameObjectWithTag("CLaranja").GetComponent<AudioSource>();
+            consumir.Play();
             laranjaUsos--;
             vida.RecuperaVida();
             life++;
