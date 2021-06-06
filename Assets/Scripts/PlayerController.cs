@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
             this.jump = false;
             this.box.gameObject.GetComponent<EdgeCollider2D>().enabled = false;
         }
-        if (life <= 0)
+        if (vida.vidaSlidder.value <= 0)
         {
             Debug.Log("Morreu");
             Checkpoint.decreaseRestLife();

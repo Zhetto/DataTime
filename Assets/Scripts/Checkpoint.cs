@@ -55,6 +55,7 @@ public class Checkpoint : MonoBehaviour
 
     static void resetKeys()
     {
+        PlayerController.laranjaUsos = 0;
         Debug.Log("Resetou");
         PlayerPrefs.SetInt("restLife", 3);
         PlayerPrefs.SetString("lastLevelName", "Lab-01");
