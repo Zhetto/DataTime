@@ -47,11 +47,12 @@ public class GameController : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (playerChoice == null)
             {
-                Instantiate(playerDefault, player.transform.position, player.transform.rotation);
+
+                GameObject obj = Instantiate(playerDefault, player.transform.position, player.transform.rotation);
             }
             else
             {
-                Instantiate(playerChoice, player.transform.position, player.transform.rotation);
+                GameObject obj = Instantiate(playerChoice, player.transform.position, player.transform.rotation);
             }
             Destroy(player);
         }
