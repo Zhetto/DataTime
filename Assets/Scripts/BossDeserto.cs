@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossDeserto : MonoBehaviour
 {
@@ -32,8 +33,11 @@ public class BossDeserto : MonoBehaviour
     private bool facingLeft = true;
     private Animator enemyAnim;
     public BoxCollider2D box;
-    public int vida;
+    public static int vida;
     public static bool bossMorto = false;
+
+    GameObject fillObj;
+    Image fill;
     
 
     // Start is called before the first frame update
@@ -44,12 +48,16 @@ public class BossDeserto : MonoBehaviour
         attackMoveDirection.Normalize();
         enemyRB = GetComponent<Rigidbody2D>();
         enemyAnim = GetComponent<Animator>();
-       
+        fillObj = GameObject.FindGameObjectWithTag("vidaBoss");
+        fillObj.GetComponent<Image>().color = new Color(1,1,1,.5f);
+        fill = fillObj.transform.GetChild(0).GetComponent<Image>();
+        fill.color = new Color(1, 0, 0, .5f);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        fill.fillAmount = (float)vida / 23;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
         isTouchingUp = Physics2D.OverlapCircle(groundCheckUp.position, groundCheckRadius, groundLayer);
@@ -194,6 +202,7 @@ public class BossDeserto : MonoBehaviour
     {
         if (collision.CompareTag("Tiro"))
         {
+            collision.gameObject.SetActive(false);
             vida--;
         }
     }

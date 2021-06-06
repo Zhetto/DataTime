@@ -23,8 +23,10 @@ public class ControleBarrasJ : MonoBehaviour
             qntSede = 30;
         }
 
-        vidaSlidder = GameObject.FindGameObjectWithTag("BarraVida").GetComponent<Slider>();
-        sedeSlider = GameObject.FindGameObjectWithTag("BarraSede").GetComponent<Slider>();
+        if (SceneManager.GetActiveScene().name != "Lab-01"){
+            vidaSlidder = GameObject.FindGameObjectWithTag("BarraVida").GetComponent<Slider>();
+            sedeSlider = GameObject.FindGameObjectWithTag("BarraSede").GetComponent<Slider>();
+        }
         vidaSlidder.value = qntVida;
         sedeSlider.value = qntSede;
         sedeSlider.maxValue = qntSede;
@@ -41,11 +43,13 @@ public class ControleBarrasJ : MonoBehaviour
         {
             Debug.Log("Você morreu Desidratado");
             Checkpoint.decreaseRestLife();
+            qntVida = 3;
             SceneManager.LoadScene("Menu");
         }
 
         if (vidaSlidder.value <= 0)
         {
+            qntVida = 3;
             Checkpoint.decreaseRestLife();
             SceneManager.LoadScene("Menu");
         }

@@ -559,7 +559,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   box: {fileID: 5727352380065283852}
-  vida: 0
+  fillObj: {fileID: 6888074872275206146, guid: db06a6a8273d74243b177b854dfdfda9, type: 3}
 --- !u!1 &3217993475423015915
 GameObject:
   m_ObjectHideFlags: 0

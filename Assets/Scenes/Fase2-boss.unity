@@ -1509,12 +1509,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b66dbd03b6d11d4289f26b749a5881d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2.5
+  force: 1.5
   maxMin: 0
   xMin: 0
   xMax: 0
-  yMin: 0
-  yMax: 0
+  yMin: -13.05
+  yMax: -13.04
 --- !u!81 &287893110
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1531,7 +1531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287893106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.05, y: -4.4, z: -10}
+  m_LocalPosition: {x: -13.05, y: -5.51, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 530690935}

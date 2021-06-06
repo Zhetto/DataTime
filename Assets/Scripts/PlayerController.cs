@@ -201,6 +201,8 @@ public class PlayerController : MonoBehaviour
         {
             jump = true;
             anim.SetBool("Jump", false);
+            GameObject fx = Instantiate(jumpFx, this.transform.position - Vector3.up * 1.35f, this.transform.rotation);
+            fx.transform.Rotate(Vector3.right * -90);
 
             if (collision.gameObject.GetComponent<Platform>() != null)
             {

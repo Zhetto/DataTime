@@ -23,6 +23,7 @@ public class BossInstancia : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Instantiate(bossDeserto, spawn.transform.position, spawn.transform.rotation);
+            this.GetComponents<BoxCollider2D>()[1].enabled = false;
         }
     }
 }

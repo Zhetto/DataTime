@@ -32,6 +32,7 @@ TagManager:
   - COdre
   - CLaranja
   - Orb
+  - vidaBoss
   layers:
   - Default
   - TransparentFX
