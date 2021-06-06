@@ -168,7 +168,7 @@ MonoBehaviour:
   target: {fileID: 0}
   ladoDireito: 0
   life: 1
-  lineOfSite: 6.46
+  lineOfSite: 45
   count: 0
   sprite: {fileID: 0}
   contador: {fileID: 0}
