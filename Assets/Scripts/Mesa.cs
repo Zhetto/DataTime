@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Mesa : MonoBehaviour
 {
     [SerializeField]
-    GameObject message;
+    GameObject message,Mira;
     bool inTable,opened;
     [SerializeField]
     Animator puzzleAnimator;
@@ -27,6 +27,8 @@ public class Mesa : MonoBehaviour
                 opened = false;
                 puzzleAnimator.SetBool("open", false);
                 Cursor.visible = false;
+                Mira.SetActive(true);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true;
             }
             else
             {
@@ -35,6 +37,8 @@ public class Mesa : MonoBehaviour
                 Debug.Log("Open Puzzle");
                 puzzleAnimator.SetBool("open", true);
                 Cursor.visible = true;
+                Mira.SetActive(false);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
             }
         }
     }

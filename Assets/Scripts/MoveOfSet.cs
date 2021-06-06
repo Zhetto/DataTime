@@ -30,6 +30,10 @@ public class MoveOfSet : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(playerController == null)
+        {
+            playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        }
         if (playerController.enabled)
         {
             if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.leftKey)))
