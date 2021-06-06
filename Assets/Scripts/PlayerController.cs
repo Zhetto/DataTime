@@ -48,10 +48,10 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().name == "Egito3")
+        /*if (SceneManager.GetActiveScene().name == "Egito3")
         {
             boss = GameObject.FindGameObjectWithTag("BossDeserto").GetComponent<BossDeserto>();
-        }
+        }*/
         //this.gameObject.AddComponent<Rigidbody2D>();
         //this.gameObject.AddComponent<BoxCollider2D>();
        
@@ -280,7 +280,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Egito3");
         }
 
-        if (collision.CompareTag("Saida3") && boss.bossMorto == true)
+        if (collision.CompareTag("Saida3") && BossDeserto.bossMorto == true)
         {
             SceneManager.LoadScene("Lab-02");
         }

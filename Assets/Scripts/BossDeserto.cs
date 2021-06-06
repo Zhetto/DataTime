@@ -33,7 +33,7 @@ public class BossDeserto : MonoBehaviour
     private Animator enemyAnim;
     public BoxCollider2D box;
     public int vida;
-    public bool bossMorto = false;
+    public static bool bossMorto = false;
     
 
     // Start is called before the first frame update
