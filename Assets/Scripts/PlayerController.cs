@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     Vector2 mousePosition;
     public BossDeserto boss;
     public AudioSource consumir;
+    public CameraController camera;
 
 
     private void Awake()
@@ -87,6 +88,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (SceneManager.GetActiveScene().name == "Egito3")
+        {
+            camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
+        }
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
 
@@ -299,6 +304,15 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Walk", false);
             laranjaUsos += 3;
             pegouLaranjas = true;
+        }
+
+        if (collision.CompareTag("Porta"))
+        {
+            Camera.main.orthographicSize = 8;
+            camera.xMax = 65.5f;
+            camera.xMin = -56;
+            camera.yMax = 13;
+            camera.yMin = -13;
         }
     }
 
