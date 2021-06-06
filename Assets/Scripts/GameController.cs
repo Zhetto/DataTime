@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
 
-        if (SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Fase2-level2" || SceneManager.GetActiveScene().name == "Egito2" || SceneManager.GetActiveScene().name == "Egito3" || SceneManager.GetActiveScene().name == "Lab-Final")
+        if (SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Fase2-level2" || SceneManager.GetActiveScene().name == "Egito2" || SceneManager.GetActiveScene().name == "Egito3" || SceneManager.GetActiveScene().name == "Lab-Final" || SceneManager.GetActiveScene().name == "Fase2-boss")
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (playerChoice == null)

@@ -29,6 +29,7 @@ TagManager:
   - BarraVida
   - BarraSede
   - BossDeserto
+  - Orb
   layers:
   - Default
   - TransparentFX

@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
                 this.platform = null;
             }
         }
-        if (collision.gameObject.CompareTag("Inimigo") || collision.gameObject.CompareTag("BossDeserto"))
+        if (collision.gameObject.CompareTag("Inimigo") || collision.gameObject.CompareTag("BossDeserto") || collision.gameObject.CompareTag("Orb"))
         {
             dano.Play();
             StartCoroutine(TomarDano());
