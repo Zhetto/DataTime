@@ -68,3 +68,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: luz
+    uniqueID: 1530791581
+    locked: 0
