@@ -1455,6 +1455,7 @@ MonoBehaviour:
   dialogueHumphrey: []
   dialogueKelley: []
   choice: {fileID: 0}
+  finish: {fileID: 0}
 --- !u!1 &714105883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,6 +2802,7 @@ MonoBehaviour:
   dialogueHumphrey: []
   dialogueKelley: []
   choice: {fileID: 0}
+  finish: {fileID: 0}
 --- !u!1 &1382269083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,6 +3337,7 @@ MonoBehaviour:
     name: Dra.Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
   choice: {fileID: 263728455}
+  finish: {fileID: 1836503809}
 --- !u!1 &1595663374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4462,7 +4465,7 @@ PrefabInstance:
         type: 3}
       propertyPath: finish
       value: 
-      objectReference: {fileID: 1836503809}
+      objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: OpenFinally
