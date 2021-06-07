@@ -55,6 +55,7 @@ public class MagicItem : MonoBehaviour
                 dialog.initial = GameController.playerChoice.name == "Kelley" ? Kelley : Humphrey;
                 dialog.StartDialogue();
                 Camera.main.orthographicSize = 3.7f;
+                text.text = "";
             }
         }
     }
