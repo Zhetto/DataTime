@@ -28,6 +28,16 @@ public class ButtonController : MonoBehaviour
         obj.GetComponent<Resume>().enabled = false;
     }
 
+    public void ResetData(bool check)
+    {
+        if (check)
+        {
+            Checkpoint.resetKeys();
+            GameController.Volume = 1;
+            PlayerPrefs.SetFloat("Volume",1);
+        }
+    }
+
     private void OnGUI()
     {
         if (alterKey)

@@ -53,7 +53,7 @@ public class Checkpoint : MonoBehaviour
         PlayerPrefs.SetString("lastLevelName", lastLevelName);
     }
 
-    static void resetKeys()
+    public static void resetKeys()
     {
         PlayerPrefs.SetString("Player", "Nenhum");
         PlayerController.laranjaUsos = 0;
