@@ -39,7 +39,7 @@ public class ControleBarrasJ : MonoBehaviour
         tempoSede -= Time.deltaTime;
         sedeSlider.value = tempoSede;
 
-        if (sedeSlider.value <= 0)
+        if (sedeSlider.value <= 0 && SceneManager.GetActiveScene().name != "Menu")
         {
             Debug.Log("Você morreu Desidratado");
             Checkpoint.decreaseRestLife();
@@ -47,7 +47,7 @@ public class ControleBarrasJ : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
 
-        if (vidaSlidder.value <= 0)
+        if (vidaSlidder.value <= 0 && SceneManager.GetActiveScene().name != "Menu")
         {
             qntVida = 3;
             Checkpoint.decreaseRestLife();

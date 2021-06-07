@@ -14,6 +14,7 @@ public class EnemyMeleeJ : MonoBehaviour
     public SpriteRenderer sprite;
     public PlayerController contador;
     AudioSource ataque;
+    Color corInicial;
 
 
     private void Awake()
@@ -21,6 +22,7 @@ public class EnemyMeleeJ : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         ataque = GetComponent<AudioSource>();
+        corInicial = this.GetComponent<SpriteRenderer>().color;
     }
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,17 @@ public class EnemyMeleeJ : MonoBehaviour
             Virar();
         if ((transform.position.x - target.position.x) < 0 && ladoDireito)
             Virar();
+
+        if (life <= 0)
+        {
+            if (this.name.Contains("Warrior"))
+            {
+                EnemyController.spawnedEnemys--;
+                EnemyController.diedEnemys++;
+            }
+            //Contador();
+            Destroy(this.gameObject);
+        }
     }
 
     void Virar()
@@ -66,7 +79,7 @@ public class EnemyMeleeJ : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (life <= 0)
+       /* if (life <= 0)
         {
             if (this.name.Contains("Warrior"))
             {
@@ -75,7 +88,7 @@ public class EnemyMeleeJ : MonoBehaviour
             }
             //Contador();
             Destroy(this.gameObject);
-        }
+        }*/
 
         if (collision.CompareTag("Tiro"))
         {
@@ -102,7 +115,7 @@ public class EnemyMeleeJ : MonoBehaviour
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(0.3f);
-        sprite.color = Color.white;
+        sprite.color = this.corInicial;
     }
 
     public void Atacar()
