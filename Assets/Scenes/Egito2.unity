@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9767,7 +9767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.004651163, y: 0.7683823}
   m_AnchorMax: {x: 0.028550388, y: 0.8012001}
-  m_AnchoredPosition: {x: 72.49999, y: -7.4000244}
+  m_AnchoredPosition: {x: 72.499954, y: -7.4000244}
   m_SizeDelta: {x: 145, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877961937
