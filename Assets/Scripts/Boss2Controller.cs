@@ -10,7 +10,7 @@ public class Boss2Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Orb.vidaTotal = 12;
     }
 
     // Update is called once per frame

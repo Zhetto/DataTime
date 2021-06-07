@@ -466,7 +466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.007500001, y: 0.832}
   m_AnchorMax: {x: 0.035, y: 0.86}
-  m_AnchoredPosition: {x: 69.000084, y: -6.700012}
+  m_AnchoredPosition: {x: 69, y: -6.700012}
   m_SizeDelta: {x: 138, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119697974
@@ -1320,7 +1320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.058750007, y: 0.81000006}
   m_AnchorMax: {x: 0.09, y: 0.85600007}
-  m_AnchoredPosition: {x: -0.89993286, y: -0.2999878}
+  m_AnchoredPosition: {x: -0.89990234, y: -0.2999878}
   m_SizeDelta: {x: -0.03715515, y: 0.36523438}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278547174
@@ -17789,6 +17789,214 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1486098435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1752187342}
+    m_Modifications:
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: OpenFinally
+      value: 
+      objectReference: {fileID: 799616380}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.9525001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.053750023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.09566797
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048891, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048891, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2aa942797b06e3e40aae8426ada0d8d1, type: 3}
+--- !u!224 &1486098436 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1486098435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1486098437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8236691226528048891, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1486098435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486098438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1486098435}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486098437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a858eb81d2345c4ca2892d9cdab159f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1486098439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486098437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a4295535f5599429092743f57e8cdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1486098438}
+  Humphrey:
+  - sentences: El consegue me ouvir?
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  - sentences: "Doutor Humphrey? Estamos com um grande problema no laborat\xF3rio.
+      Algo n\xE3o saiu como esperado!"
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  - sentences: "A Dra. Tyler n\xE3o tem nenhuma informa\xE7\xE3o sobre isso?\r"
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  - sentences: "Quem \xE9 Dra. Tyler? Dr. Humphrey, o senhor est\xE1 bem? Estamos
+      sendo atacados..."
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  - sentences: MALDITO EFEITO BORBOLETA! ME LEVA DE VOLTA!
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  - sentences: ...
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  Kelley:
+  - sentences: Jeff consegue me ouvir?
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  - sentences: "Doutora Kelley? Estamos com um grande problema no laborat\xF3rio.
+      Algo n\xE3o saiu como \resperado!"
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  - sentences: "A Dra. Tyler n\xE3o tem nenhuma informa\xE7\xE3o sobre isso?\r"
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  - sentences: "Quem \xE9 Dra. Tyler? Dra. Kelley, a senhora est\xE1 bem? Estamos
+      sendo atacados..."
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  - sentences: "MALDITO EFEITO BORBOLETA! ME LEVA DE VOLTA!\r"
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  - sentences: ...
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
 --- !u!1 &1486250273
 GameObject:
   m_ObjectHideFlags: 0
@@ -23996,6 +24204,7 @@ RectTransform:
   - {fileID: 278547173}
   - {fileID: 2127828145}
   - {fileID: 904204581}
+  - {fileID: 1486098436}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26247,7 +26456,7 @@ PrefabInstance:
     - target: {fileID: 2459809241220116133, guid: 2393cfb7bb6b380488689603339c3fa5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.39
+      value: 4.66
       objectReference: {fileID: 0}
     - target: {fileID: 2459809241220116133, guid: 2393cfb7bb6b380488689603339c3fa5,
         type: 3}
@@ -26298,6 +26507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Anomalia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459809241220116135, guid: 2393cfb7bb6b380488689603339c3fa5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2459809241220116135, guid: 2393cfb7bb6b380488689603339c3fa5,
         type: 3}

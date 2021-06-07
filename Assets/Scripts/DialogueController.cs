@@ -82,7 +82,7 @@ public class DialogueController : MonoBehaviour
     {
         try { GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true; } catch { }
         anim.SetBool("Open", false);
-        if (SceneManager.GetActiveScene().name == "Lab-01" || SceneManager.GetActiveScene().name == "Lab-02" || SceneManager.GetActiveScene().name == "Fase2-level3")
+        if (SceneManager.GetActiveScene().name == "Lab-01" || SceneManager.GetActiveScene().name == "Lab-02" || SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Fase2-boss")
         {
             if (OpenFinally != null)
             {
