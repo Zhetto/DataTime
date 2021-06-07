@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
+    private void Awake()
+    {
+        Screen.SetResolution(Screen.width, (int)(Screen.width / 1.6), FullScreenMode.ExclusiveFullScreen);
+    }
+
     bool alterKey;
     GameObject obj;
 
