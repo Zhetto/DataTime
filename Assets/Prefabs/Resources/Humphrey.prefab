@@ -52,7 +52,7 @@ PrefabInstance:
     - target: {fileID: 1055878903755661291, guid: 7ea09d701319839439efe417f10b67ab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -500
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1055878903755661291, guid: 7ea09d701319839439efe417f10b67ab,
         type: 3}
@@ -102,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 1055878903755661300, guid: 7ea09d701319839439efe417f10b67ab,
         type: 3}
       propertyPath: m_Name
-      value: Humphrey Variant
+      value: Humphrey
       objectReference: {fileID: 0}
     - target: {fileID: 1055878903755661301, guid: 7ea09d701319839439efe417f10b67ab,
         type: 3}
