@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3902,53 +3902,43 @@ MonoBehaviour:
   controller: {fileID: 328863126}
   Humphrey:
   - sentences: "Houve uma mudan\xE7a nos gr\xE1ficos atemporais, algo a mais foi
-      puxado junto com voc\xEA, nunca \r\ntivemos esses dados antes, n\xE3o sabemos
+      puxado junto com voc\xEA. \r\nNunca tivemos esses dados antes. N\xE3o sabemos
       o que pode ter ocorrido."
-    name: Dra Tyler
+    name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
-  - sentences: "\"Ellie ent\xE3o entrega o artefato ao Sr. Oswald.\""
-    name: 
-    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  - sentences: " Obrigado Dr. Humphrey, n\xF3s sab\xEDamos que poder\xEDamos contar
-      com voc\xEAs, agora com sua \r\nretomada as Grandes Navega\xE7\xF5es Chinesas,
-      voc\xEA levar\xE1 consigo uma arma, para n\xE3o correr mais perigo, \r\ntome
-      cuidado, voc\xEA e os artefatos que faltam s\xE3o muitos importantes para a
-      GEMU"
+  - sentences: "Obrigado Dr. Humphrey! N\xF3s sab\xEDamos que poder\xEDamos contar
+      com voc\xEAs. Agora com \r\nsua ida \xE0s Grandes Navega\xE7\xF5es Chinesas,
+      tome cuidado, voc\xEA e os artefatos que faltam s\xE3o muito \r\nimportantes
+      para a GEMU."
     name: Sr. Oswald
     sprite: {fileID: 21300000, guid: 0b02bf2b6ffbc00408b109df32ffe41f, type: 3}
-  - sentences: "Cuide-se El, quando voc\xEA voltar comeremos algumas por\xE7\xF5es
-      de batatas fritas \r\nclonadas.\r"
+  - sentences: "Cuide-se Jeff, quando voc\xEA voltar comeremos algumas por\xE7\xF5es
+      de batatas \r\nfritas clonadas."
     name: Dra. Ellie Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
-  - sentences: "Vou cobrar! Obrigada pessoal, vejo voc\xEAs daqui h\xE1 algumas horas,
-      espero\u2026\r\nEllie ent\xE3o entra novamente ao teletransportador e \xE9
-      enviada para sua nova aventura."
-    name: Dr Jefffrey Humphrey
+  - sentences: "Vou cobrar! Obrigada pessoal. Vejo voc\xEAs daqui h\xE1 algumas horas,
+      espero\u2026"
+    name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   Kelley:
   - sentences: "Houve uma mudan\xE7a nos gr\xE1ficos atemporais, algo a mais foi
-      puxado junto com voc\xEA, nunca \r\ntivemos esses dados antes, n\xE3o sabemos
-      o que pode ter ocorrido.\r\nEllie ent\xE3o entrega o artefato ao Sr. Oswald"
+      puxado junto com voc\xEA. \r\nNunca tivemos esses dados antes. N\xE3o sabemos
+      o que pode ter ocorrido."
     name: Dra Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
-  - sentences: "Ellie ent\xE3o entrega o artefato ao Sr. Oswald.\r"
-    name: 
-    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  - sentences: " Obrigado Dra. Kelley, n\xF3s sab\xEDamos que poder\xEDamos contar
-      com voc\xEAs, agora com sua \r\nretomada as Grandes Navega\xE7\xF5es Chinesas,
-      voc\xEA levar\xE1 consigo uma arma, para n\xE3o correr mais perigo, \r\ntome
-      cuidado, voc\xEA e os artefatos que faltam s\xE3o muitos importantes para a
-      GEMU."
+  - sentences: "Obrigado Dra. Kelley! N\xF3s sab\xEDamos que poder\xEDamos contar
+      com voc\xEAs. Agora com \r\nsua ida \xE0s Grandes Navega\xE7\xF5es Chinesas,
+      tome cuidado, voc\xEA e os artefatos que faltam s\xE3o muito \r\nimportantes
+      para a GEMU.\r"
     name: Sr Oswald
     sprite: {fileID: 21300000, guid: 0b02bf2b6ffbc00408b109df32ffe41f, type: 3}
   - sentences: "Cuide-se El, quando voc\xEA voltar comeremos algumas por\xE7\xF5es
-      de batatas fritas \r\nclonadas."
-    name: Dr. Jeffrey Humphrey
+      de batatas \r\nfritas clonadas."
+    name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
-  - sentences: "Vou cobrar! Obrigada pessoal, vejo voc\xEAs daqui h\xE1 algumas horas,
-      espero\u2026\r\nEllie ent\xE3o entra novamente ao teletransportador e \xE9
-      enviada para sua nova aventura."
-    name: Dra. Ellie Kelley
+  - sentences: "Vou cobrar! Obrigada pessoal. Vejo voc\xEAs daqui h\xE1 algumas horas,
+      espero\u2026"
+    name: Dra. Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
 --- !u!1 &1863721014
 GameObject:

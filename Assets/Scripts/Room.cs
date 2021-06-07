@@ -7,13 +7,15 @@ public class Room : MonoBehaviour
 {
     SpriteRenderer sprite;
     [SerializeField] SpriteRenderer madame;
-    public bool show,go;
+    public bool show,go,opened;
     Camera cam;
     Vector3 initialPosition;
     [SerializeField] SpriteRenderer chair;
     [SerializeField] float forceColor, forceExpand,limitExpandMax,limitExpandMin,forceGo;
     [SerializeField] Text text;
     [SerializeField] GameObject[] objects;
+    [SerializeField] DialogueController dialog;
+    [SerializeField] Dialogue[] Kelley, Humphrey;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class Room : MonoBehaviour
         show = false;
         cam = Camera.main;
         go = false;
+
     }
 
     // Update is called once per frame
@@ -84,8 +87,9 @@ public class Room : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.E) && show)
+        if (Input.GetKeyDown(KeyCode.E) && show && !opened)
         {
+            opened = true;
             go = true;
             chair.enabled = false;
             text.text = "";
@@ -94,6 +98,9 @@ public class Room : MonoBehaviour
             {
                 item.SetActive(false);
             }
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("Walk", false);
+            dialog.initial = GameController.playerChoice.name == "Kelley" ? Kelley : Humphrey ;
+            dialog.StartDialogue();
         }
     }
 
@@ -115,11 +122,13 @@ public class Room : MonoBehaviour
             {
                 item.SetActive(true);
             }
+            opened = false;
             Debug.Log("Saiu do quarto");
             show = false;            
             chair.enabled = true;
             text.text = "";
             this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            
         }
     }
 }

@@ -38,10 +38,12 @@ public class GameController : MonoBehaviour
         KeyPause = (KeyCode)PlayerPrefs.GetInt("KeyPause");
         KeyResume = (KeyCode)PlayerPrefs.GetInt("KeyResume");
         Volume = PlayerPrefs.GetFloat("Volume");
-        if (playerDefault != null && playerChoice == null)
+        string playerPref = PlayerPrefs.GetString("Player");
+        if (playerPref != "Nenhum")
         {
-            playerChoice = playerDefault;
+            playerChoice = Resources.Load(playerPref) as GameObject;
         }
+        PlayerPrefs.SetString("Player", "Kelley");
     }
 
     private void Start()
@@ -50,11 +52,7 @@ public class GameController : MonoBehaviour
         {
             item.volume = Volume;
         }
-        string playerPref = PlayerPrefs.GetString("Player");
-        if (playerPref != "Nenhum")
-        {
-            playerChoice = Resources.Load(playerPref) as GameObject;
-        }
+
 
         if (SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Fase2-level2" || SceneManager.GetActiveScene().name == "Egito2" || SceneManager.GetActiveScene().name == "Egito3" || SceneManager.GetActiveScene().name == "Lab-Final" || SceneManager.GetActiveScene().name == "Fase2-boss")
         {

@@ -11,7 +11,9 @@ public class MagicItem : MonoBehaviour
     [SerializeField]float colorForce;
     Color color;
     [SerializeField] Text text;
-    [SerializeField] GameObject uiEnemy, enemyController, platforms;
+    [SerializeField] GameObject uiEnemy, enemyController, platforms,madame;
+    [SerializeField] DialogueController dialog;
+    [SerializeField] Dialogue[] Kelley, Humphrey;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class MagicItem : MonoBehaviour
             sprite.color -= color;
             if (sprite.color.a <= 0)
             {
-                enemyController.SetActive(true);
+                //enemyController.SetActive(true);
                 uiEnemy.SetActive(true);
                 platforms.SetActive(false);
                 //Debug.Log("Liberar inimigos");
@@ -45,6 +47,14 @@ public class MagicItem : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 collect = true;
+                madame.SetActive(true);
+                madame.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                madame.transform.position += Vector3.down*2f;
+                madame.transform.position += Vector3.left * 4f;
+                dialog.OpenFinally = enemyController;
+                dialog.initial = GameController.playerChoice.name == "Kelley" ? Kelley : Humphrey;
+                dialog.StartDialogue();
+                Camera.main.orthographicSize = 3.7f;
             }
         }
     }

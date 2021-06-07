@@ -10,14 +10,17 @@ public class DialogueController : MonoBehaviour
     [SerializeField] Image img;
     public Queue<Dialogue> sentences;
     [SerializeField]public  Dialogue[] initial;
-    [SerializeField] GameObject OpenFinally;
+    [SerializeField]public  GameObject OpenFinally;
     [SerializeField] GameObject finish;
+    AudioSource aud;
 
     Animator anim;
     [SerializeField] bool open;
     // Start is called before the first frame update
     void Start()
     {
+        aud = this.gameObject.AddComponent<AudioSource>();
+        aud.clip = Resources.Load("tic") as AudioClip;
         sentences = new Queue<Dialogue>();
         anim = GetComponent<Animator>();
         anim.SetBool("Open", true);
@@ -69,8 +72,9 @@ public class DialogueController : MonoBehaviour
         message.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
+            aud.Play();
             message.text += letter;
-            yield return .01f;
+            yield return .02f;
         }
     }
 
@@ -78,7 +82,7 @@ public class DialogueController : MonoBehaviour
     {
         try { GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = true; } catch { }
         anim.SetBool("Open", false);
-        if (SceneManager.GetActiveScene().name == "Lab-01" || SceneManager.GetActiveScene().name == "Lab-02")
+        if (SceneManager.GetActiveScene().name == "Lab-01" || SceneManager.GetActiveScene().name == "Lab-02" || SceneManager.GetActiveScene().name == "Fase2-level3")
         {
             if (OpenFinally != null)
             {
