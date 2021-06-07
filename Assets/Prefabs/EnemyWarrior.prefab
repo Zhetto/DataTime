@@ -167,7 +167,7 @@ MonoBehaviour:
   velocidade: 2
   target: {fileID: 0}
   ladoDireito: 0
-  life: 1
+  life: 2
   lineOfSite: 45
   count: 0
   sprite: {fileID: 0}
