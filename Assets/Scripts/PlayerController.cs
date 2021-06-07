@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
             Checkpoint.decreaseRestLife();
         }
 
-        if (rb.velocity.y < -10 && !tomouQueda)
+        if (rb.velocity.y < -15 && !tomouQueda)
         {
             Debug.Log("you fell");
             tomouQueda = true;
