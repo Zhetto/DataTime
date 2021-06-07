@@ -466,7 +466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.007500001, y: 0.832}
   m_AnchorMax: {x: 0.035, y: 0.86}
-  m_AnchoredPosition: {x: 69.00011, y: -6.700012}
+  m_AnchoredPosition: {x: 69.000084, y: -6.700012}
   m_SizeDelta: {x: 138, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119697974
@@ -624,10 +624,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f6e0b439cdef4e8307082a92d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 3
-  delayTime: 1
+  angle: 2.7
+  delayTime: 0.59
   expandForce: 0
-  right: 0
+  right: 1
 --- !u!212 &129112752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 3
-  delayTime: 1
+  delayTime: 1.21
   expandForce: 0
   right: 1
 --- !u!212 &684751624
@@ -4479,8 +4479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f6e0b439cdef4e8307082a92d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 3
-  delayTime: 1
+  angle: 2.23
+  delayTime: 0.93
   expandForce: 0
   right: 1
 --- !u!212 &709668355
@@ -11567,8 +11567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f6e0b439cdef4e8307082a92d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 3
-  delayTime: 1
+  angle: 2.19
+  delayTime: 0.58
   expandForce: 0
   right: 1
 --- !u!212 &1131594875
@@ -11857,7 +11857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 3
-  delayTime: 1
+  delayTime: 0.52
   expandForce: 0
   right: 1
 --- !u!212 &1245176646
@@ -12100,7 +12100,7 @@ MonoBehaviour:
   angle: 3
   delayTime: 1
   expandForce: 0
-  right: 0
+  right: 1
 --- !u!212 &1302537917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12278,7 +12278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f6e0b439cdef4e8307082a92d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 3
+  angle: 2.43
   delayTime: 1
   expandForce: 0
   right: 1
@@ -12559,7 +12559,7 @@ GameObject:
   - component: {fileID: 1366601048}
   - component: {fileID: 1366601047}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particulas de Chuva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17488,9 +17488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 3
-  delayTime: 1
+  delayTime: 1.05
   expandForce: 0
-  right: 1
+  right: 0
 --- !u!212 &1411566606
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17736,7 +17736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 3
-  delayTime: 2
+  delayTime: 1.27
   expandForce: 0
   right: 1
 --- !u!212 &1460422340
@@ -23801,8 +23801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f6e0b439cdef4e8307082a92d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 3
-  delayTime: 1
+  angle: 2.52
+  delayTime: 0.57
   expandForce: 0
   right: 1
 --- !u!212 &1732153234
@@ -25174,8 +25174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2f6e0b439cdef4e8307082a92d4783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  angle: 3
-  delayTime: 1
+  angle: 2.31
+  delayTime: 0.76
   expandForce: 0
   right: 1
 --- !u!212 &2001191848
@@ -25580,7 +25580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 3
-  delayTime: 1
+  delayTime: 0.84
   expandForce: 0
   right: 0
 --- !u!212 &2084229104
