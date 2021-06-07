@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     public BossDeserto boss;
     public AudioSource consumir;
     public CameraController camera;
+    bool tomouQueda = false;
 
     private void Awake()
     {
@@ -140,6 +141,12 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Morreu");
             Checkpoint.decreaseRestLife();
         }
+
+        if (rb.velocity.y < -10 && !tomouQueda)
+        {
+            Debug.Log("you fell");
+            tomouQueda = true;
+        }
     }
 
     public void LateUpdate()
@@ -200,6 +207,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             jump = true;
+           
+            if (tomouQueda == true)
+            {
+                dano.Play();
+                vida.Dano();
+                StartCoroutine(TomarDano());
+                tomouQueda = false;
+            }
+            
             anim.SetBool("Jump", false);
             GameObject fx = Instantiate(jumpFx, this.transform.position - Vector3.up * 1.35f, this.transform.rotation);
             fx.transform.Rotate(Vector3.right * -90);
