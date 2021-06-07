@@ -1346,7 +1346,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
   - sentences: "Amada, quem voc\xEA procura \xE9 a dona. Vou te levar at\xE9 a madame"
     name: Garota
-    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+    sprite: {fileID: 21300000, guid: 41488cf8af36b9344847f87a4b840e60, type: 3}
 --- !u!1 &466581350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1523,18 @@ MonoBehaviour:
   cover: {fileID: 682654500}
   text: {fileID: 2001911542}
   artefact: {fileID: 575720400}
+  madame: {fileID: 734044590}
+  Kelley:
+  - sentences: "Ela n\xE3o deixar\xE1 eu sair com a caveira, ent\xE3o vou peg\xE1-la
+      mesmo assim!"
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  Humphrey:
+  - sentences: "Ela n\xE3o deixar\xE1 eu sair com a caveira, ent\xE3o vou peg\xE1-la
+      mesmo assim!"
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  dialogue: {fileID: 1692032560}
 --- !u!61 &525368903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1814,6 +1826,26 @@ MonoBehaviour:
   uiEnemy: {fileID: 2144104625}
   enemyController: {fileID: 17466265}
   platforms: {fileID: 888921184}
+  madame: {fileID: 734044590}
+  dialog: {fileID: 1692032560}
+  Kelley:
+  - sentences: " Vamos garota! Esse \xE9 seu teste, eu sei que voc\xEA est\xE1 aqui
+      pela caveira do meu \r\nmarido, mas n\xE3o vai conseguir ela com facilidade."
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
+  - sentences: "Perd\xE3o Madame, mas eu s\xF3 preciso dela para conseguir completar
+      meu trabalho."
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  Humphrey:
+  - sentences: "Vamos garoto! Esse \xE9 seu teste, eu sei que voc\xEA est\xE1 aqui
+      pela caveira do meu \r\nmarido, mas n\xE3o vai conseguir ela com facilidade."
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
+  - sentences: "Perd\xE3o Madame, mas eu s\xF3 preciso dela para conseguir completar
+      meu trabalho."
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
 --- !u!1 &682654500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,7 +2923,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.010000001, y: 0.81200004}
   m_AnchorMax: {x: 0.03375, y: 0.84200007}
-  m_AnchoredPosition: {x: 76.99994, y: -9.067505}
+  m_AnchoredPosition: {x: 76.99993, y: -9.067505}
   m_SizeDelta: {x: 141, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935831149
@@ -6071,6 +6103,7 @@ MonoBehaviour:
   madame: {fileID: 734044592}
   show: 0
   go: 0
+  opened: 0
   chair: {fileID: 1900570335}
   forceColor: 0.06
   forceExpand: 0.06
@@ -6081,6 +6114,46 @@ MonoBehaviour:
   objects:
   - {fileID: 73742742}
   - {fileID: 1806927691}
+  dialog: {fileID: 1692032560}
+  Kelley:
+  - sentences: "Ouvi dizer que voc\xEA estava procurando por mim. O que voc\xEA quer?"
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
+  - sentences: "Madame Shih, estou em busca de uma caveira, a senhora sabe qual \xE9.
+      \xC9 de extrema \r\nimport\xE2ncia para o nosso futuro."
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  - sentences: Garota, por qual motivo eu te daria a caveira do meu falecido marido?
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
+  - sentences: "Por um motivo que vai al\xE9m de mim, de voc\xEA e de qualquer outra
+      pessoa. O futuro da \r\nhumanidade."
+    name: Dra. Kelley
+    sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
+  - sentences: "Durma crian\xE7a, amanh\xE3 conversaremos sobre esse tal de futuro
+      e o quanto ele \r\nvaler\xE1 para mim."
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
+  Humphrey:
+  - sentences: " Ouvi dizer que voc\xEA estava procurando por mim. O que voc\xEA
+      quer?"
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
+  - sentences: "Madame Shih, estou em busca de uma caveira, a senhora sabe qual \xE9.
+      \xC9 de extrema \r\nimport\xE2ncia para o nosso futuro."
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  - sentences: Garoto, por qual motivo eu te daria a caveira do meu falecido marido?
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
+  - sentences: "Por um motivo que vai al\xE9m de mim, de voc\xEA e de qualquer outra
+      pessoa. O futuro da \r\nhumanidade."
+    name: Dr. Humphrey
+    sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
+  - sentences: "Durma crian\xE7a, amanh\xE3 conversaremos sobre esse tal de futuro
+      e o quanto ele \r\nvaler\xE1 para mim.\r"
+    name: Madame Shih
+    sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
 --- !u!1 &1765947685
 GameObject:
   m_ObjectHideFlags: 0
@@ -7174,7 +7247,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100%
+  m_Text: 
 --- !u!222 &2022053567
 CanvasRenderer:
   m_ObjectHideFlags: 0

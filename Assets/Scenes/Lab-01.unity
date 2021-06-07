@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3289,58 +3289,46 @@ MonoBehaviour:
     type: 3}
   Kelley: {fileID: 1055878903755661300, guid: 7ea09d701319839439efe417f10b67ab, type: 3}
   dialogueHumphrey:
-  - sentences: "Pois bem, Doutor, o senhor ser\xE1 levado \xE0 tr\xEAs Eras, sendo
-      o Egito Antigo, Grandes \r\nNavega\xE7\xF5es da China e a Primeira Guerra Mundial,
-      mais precisamente na j\xE1 extinta Paris. Voc\xEA levar\xE1 \r\nesse Caderno
-      com voc\xEA, para que o senhor saiba exatamente o que buscar."
+  - sentences: "Pois bem, Doutor, o senhor ser\xE1 levado \xE0 duas Eras,  sendo
+      o Egito Antigo e Grandes\r\nNavega\xE7\xF5es da China.  Lembre-se que o senhor
+      estar\xE1 basicamente em outros mundos, que para\r\nn\xF3s, ainda s\xE3o primitivos."
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
-  - sentences: "Podendo acess\xE1-lo \r\nsempre que necess\xE1rio. Um Caderno, para
-      n\xE3o despertar muita aten\xE7\xE3o com a nossa tecnologia, \r\nlembre-se
-      que a senhora estar\xE1 basicamente em outros mundos, onde para n\xF3s, ainda
-      s\xE3o primatas. \r\nN\xE3o desperte muita aten\xE7\xE3o, e que sua cren\xE7a
-      a acompanhe."
+  - sentences: "Sobre suas vestimentas, voc\xEA n\xE3o ser\xE1 notada, pois com nosso
+      \r\nequipamento voc\xEA estar\xE1 camuflada \xE0 era correspondente. Mesmo
+      assim n\xE3o desperte muita \r\naten\xE7\xE3o, e que sua cren\xE7a a acompanhe.\r"
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
-  - sentences: "\"Dr. Humphrey recebe ent\xE3o o caderno e entra na base de teleporte.\""
-    name: 
-    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   - sentences: Ok, Dr. Humphrey, consegue me ouvir? Mesmo estando do meu lado?
     name: Dra. Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
-  - sentences: "Muito engra\xE7ado, tamb\xE9m vou sentir saudades."
+  - sentences: "Muito engra\xE7ado. Tamb\xE9m vou sentir saudades."
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
-  - sentences: Se cuida Jeff, que nos veremos em algumas hora
+  - sentences: Se cuida Jeff, que nos veremos em algumas horas.
     name: Dra. Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
   - sentences: "At\xE9 logo El."
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   dialogueKelley:
-  - sentences: "Pois bem, Doutor, o senhor ser\xE1 levado \xE0 tr\xEAs Eras, sendo
-      o Egito Antigo, Grandes \r\nNavega\xE7\xF5es da China e a Primeira Guerra Mundial,
-      mais precisamente na j\xE1 extinta Paris. Voc\xEA levar\xE1 \r\nesse Caderno
-      com voc\xEA, para que o senhor saiba exatamente o que buscar."
+  - sentences: "Pois bem, Doutora, a senhora ser\xE1 levada a duas Eras, sendo o
+      Egito Antigo e Grandes\r\nNavega\xE7\xF5es da China. Lembre-se que a senhora
+      estar\xE1 basicamente em outros mundos, que para\r\nn\xF3s, ainda s\xE3o primitivos."
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
-  - sentences: "Podendo acess\xE1-lo \r\nsempre que necess\xE1rio. Um Caderno, para
-      n\xE3o despertar muita aten\xE7\xE3o com a nossa tecnologia, \r\nlembre-se
-      que a senhora estar\xE1 basicamente em outros mundos, onde para n\xF3s, ainda
-      s\xE3o primatas. \r\nN\xE3o desperte muita aten\xE7\xE3o, e que sua cren\xE7a
-      a acompanhe."
+  - sentences: "Sobre suas vestimentas, voc\xEA n\xE3o ser\xE1 notada, pois com nosso
+      \r\nequipamento voc\xEA estar\xE1 camuflada \xE0 era correspondente. Mesmo
+      assim n\xE3o desperte muita \r\naten\xE7\xE3o, e que sua cren\xE7a a acompanhe.\r"
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
-  - sentences: "\"Dra. Kelley recebe ent\xE3o o caderno e entra na base de teleporte.\""
-    name: 
-    sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   - sentences: Ok, Dra. Kelley, consegue me ouvir? Mesmo estando do meu lado?
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
-  - sentences: "Muito engra\xE7ado, tamb\xE9m vou sentir saudades."
+  - sentences: "Muito engra\xE7ado. Tamb\xE9m vou sentir saudades."
     name: Dra. Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
-  - sentences: Se cuida El, que nos veremos em algumas hora
+  - sentences: Se cuida El, que nos veremos em algumas horas.
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   - sentences: "At\xE9 logo Jeff."
@@ -4480,6 +4468,158 @@ PrefabInstance:
       propertyPath: OpenFinally
       value: 
       objectReference: {fileID: 263728455}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[0].name
+      value: Dra. Tyler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[1].name
+      value: Dr. Humphrey
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[5].name
+      value: Sr. Oswald
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[9].name
+      value: Dra. Tyler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[10].name
+      value: Dra. Tyler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[11].name
+      value: Dr. Humphrey
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[12].name
+      value: Dra. Kelley
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758,
+        type: 3}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[5].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b02bf2b6ffbc00408b109df32ffe41f,
+        type: 3}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[9].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758,
+        type: 3}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[10].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758,
+        type: 3}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[11].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039,
+        type: 3}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[12].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50,
+        type: 3}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[0].sentences
+      value: "Aten\xE7\xE3o! Todos comparecer ao laborat\xF3rio para uma reuni\xE3o
+        de emergencia! Obrigado!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[2].sentences
+      value: "Espero que n\xE3o seja nada relacionado com o f\xF3ssil do mediterr\xE2neo.
+        Estamos perto de \r\ndescobrir \xE0 qual criatura ele pertencia."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[3].sentences
+      value: "BEM-VINDAS, MINHAS CRIAN\xC7AS! HOJE \xC9 UM DIA PARA COMEMORAR!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[4].sentences
+      value: "N\xD3S FINALMENTE CONSEGUIMOS! AVAN\xC7AMOS COM AS PESQUISAS \r\nCOMO
+        NUNCA ANTES, E OS TESTES\u2026 MEU DEUS OS TESTES... FORAM PERFEITOS! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[5].sentences
+      value: "VOC\xCAS S\xC3O AS PESSOAS MAIS PERFEITAS PARA A OCASI\xC3O MEUS JOVENS
+        \r\nPROD\xCDGIOS! OK, VAMOS ACALMAR OS \xC2NIMOS."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[6].sentences
+      value: "Obrigada pelas palavras, Sr. Oswald. Sem d\xFAvidas hoje \xE9 um dia
+        para comemorarmos!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[7].sentences
+      value: "Ap\xF3s 142 anos de pesquisa, testes e muito estresse, n\xF3s finalmente
+        conseguimos com \xEAxito um \r\ngrande avan\xE7o na nossa pesquisa. A partir
+        de hoje, \xE0s 18 horas, o mundo inteiro saber\xE1 que n\xF3s, a \r\nGEMU,
+        finalmente conseguiremos viajar para o passado. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[8].sentences
+      value: "Por isso, voc\xEAs, Dr. Humphrey e Dra. \r\nKelley est\xE3o aqui, queremos
+        que um de voc\xEAs prossiga a pesquisa pelo laborat\xF3rio e um de voc\xEAs
+        \r\nprossiga com a pesquisa em campo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[9].sentences
+      value: " Ningu\xE9m al\xE9m de voc\xEAs poder\xE1 fazer esse trabalho, pois
+        com \r\nseus feitos em suas carreiras, n\xE3o temos e talvez nunca teremos
+        pessoas t\xE3o capazes de tal trabalho. \r\nPor\xE9m a decis\xE3o entre ir
+        e ficar, ser\xE1 inteiramente de voc\xEAs."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[10].sentences
+      value: "Quanto aos danos colaterais n\xE3o se \r\npreocupem, pois j\xE1 houve
+        muitos testes, e os danos s\xE3o quase nulos. Quase\u2026 Mas agora, voltemos
+        \r\na comemorar!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[11].sentences
+      value: "\xC9 muita informa\xE7\xE3o de uma vez, mas fico extremamente feliz
+        por essa \r\noportunidade!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[12].sentences
+      value: "Tenho certeza que n\xF3s faremos a escolha certa."
+      objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048890, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: m_Pivot.x
