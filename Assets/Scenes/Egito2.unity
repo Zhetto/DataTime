@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -476,6 +481,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1009,6 +1019,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -1284,6 +1299,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2076,6 +2096,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
@@ -3450,6 +3475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 0.14097543
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
@@ -9113,6 +9143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -9732,7 +9767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.004651163, y: 0.7683823}
   m_AnchorMax: {x: 0.028550388, y: 0.8012001}
-  m_AnchoredPosition: {x: 72.5, y: -7.4000244}
+  m_AnchoredPosition: {x: 72.49999, y: -7.4000244}
   m_SizeDelta: {x: 145, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877961937
@@ -10039,6 +10074,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyMelee
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2734047300209080844, guid: 457801f54fe3b8349923a72270a51bcc,
         type: 3}
