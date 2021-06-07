@@ -8,7 +8,7 @@ public class Choice : MonoBehaviour
     static string name = "null";
     [SerializeField] GameObject Humphrey, Kelley;
     [SerializeField] Dialogue[] dialogueHumphrey, dialogueKelley;
-    [SerializeField] GameObject choice;
+    [SerializeField] GameObject choice,finish;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class Choice : MonoBehaviour
             GameController.playerChoice = Kelley;
             dialogue.initial = this.dialogueKelley;
         }
-        
+        dialogue.OpenFinally = finish;
         dialogue.StartDialogue();
 
         choice.SetActive(false);
