@@ -43,11 +43,15 @@ public class GameController : MonoBehaviour
         {
             playerChoice = Resources.Load(playerPref) as GameObject;
         }
-        PlayerPrefs.SetString("Player", "Kelley");
     }
 
     private void Start()
     {
+        if(SceneManager.GetActiveScene().name != "Lab-01" && SceneManager.GetActiveScene().name != "Lab-02" && SceneManager.GetActiveScene().name != "Lab-Final" && SceneManager.GetActiveScene().name != "Menu")
+        {
+            Instantiate(Resources.Load("Life") as GameObject, GameObject.FindObjectOfType<Canvas>().transform);
+        }
+
         foreach(AudioSource item in GameObject.FindObjectsOfType<AudioSource>())
         {
             item.volume = Volume;
