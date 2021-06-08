@@ -13,6 +13,7 @@ public class ControleBarrasJ : MonoBehaviour
     float tempoSede;
     public PlayerController odre;
     public AudioSource consumir;
+    public static string morteMotivo;
 
     // Start is called before the first frame update
     void Start()
@@ -41,17 +42,19 @@ public class ControleBarrasJ : MonoBehaviour
 
         if (sedeSlider.value <= 0 && SceneManager.GetActiveScene().name != "Menu")
         {
+            morteMotivo = "Você Morreu Desidratado. Beba Água!";
             Debug.Log("Você morreu Desidratado");
             Checkpoint.decreaseRestLife();
             qntVida = 3;
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameOver");
         }
 
         if (vidaSlidder.value <= 0 && SceneManager.GetActiveScene().name != "Menu")
         {
+            morteMotivo = "Você Morreu ao levar Dano.";
             qntVida = 3;
             Checkpoint.decreaseRestLife();
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameOver");
         }
 
         if (Input.GetKeyDown(KeyCode.F) && odre.temOdre == true && odre.odreUsos > 0)
