@@ -74,6 +74,7 @@ public class BossDeserto : MonoBehaviour
 
         if (vida <= 0)
         {
+            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Resources.Load("BossDie") as AudioClip);
             GameObject fx = Instantiate(Resources.Load("BossFx") as GameObject,this.transform.position,this.transform.rotation);
             fx.transform.position = new Vector3(fx.transform.position.x, fx.transform.position.y, 0);
             bossMorto = true;

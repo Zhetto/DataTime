@@ -164,7 +164,7 @@ public class Boss2 : MonoBehaviour
             {
                 Instantiate(Resources.Load("Death Orbs") as GameObject,this.transform.position,this.transform.rotation);
                 Destroy(this.gameObject);
-                Debug.Log("Morreu o boss");
+                GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Resources.Load("BossDie") as AudioClip );
             }
         }
     }

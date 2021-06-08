@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3315,7 +3315,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   dialogueKelley:
   - sentences: "Pois bem, Doutora, a senhora ser\xE1 levada a duas Eras, sendo o
-      Egito Antigo e Grandes\r\nNavega\xE7\xF5es da China. Lembre-se que a senhora
+      Egito Antigo e Grandes\r Navega\xE7\xF5es da China. Lembre-se que a senhora
       estar\xE1 basicamente em outros mundos, que para\r n\xF3s, ainda s\xE3o primitivos."
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
@@ -4567,7 +4567,7 @@ PrefabInstance:
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: initial.Array.data[4].sentences
-      value: "N\xD3S FINALMENTE CONSEGUIMOS! AVAN\xC7AMOS COM AS PESQUISAS \r\nCOMO
+      value: "N\xD3S FINALMENTE CONSEGUIMOS! AVAN\xC7AMOS COM AS PESQUISAS \rCOMO
         NUNCA ANTES, E OS TESTES\u2026 MEU DEUS OS TESTES... FORAM PERFEITOS! "
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
@@ -4608,9 +4608,9 @@ PrefabInstance:
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: initial.Array.data[10].sentences
-      value: "Quanto aos danos colaterais n\xE3o se \r\npreocupem, pois j\xE1 houve
-        muitos testes, e os danos s\xE3o quase nulos. Quase\u2026 Mas agora, voltemos
-        \ra comemorar!\r"
+      value: "Quanto aos danos colaterais n\xE3o se preocupem, pois j\xE1 houve muitos
+        testes, e os danos s\xE3o quase nulos. Quase\u2026 Mas agora, voltemos \ra
+        comemorar!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
