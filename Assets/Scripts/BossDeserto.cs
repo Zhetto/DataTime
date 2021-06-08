@@ -43,7 +43,7 @@ public class BossDeserto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vida = 1;
+        vida = 23;
         idleMoveDirection.Normalize();
         attackMoveDirection.Normalize();
         enemyRB = GetComponent<Rigidbody2D>();

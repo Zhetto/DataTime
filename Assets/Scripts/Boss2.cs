@@ -162,6 +162,7 @@ public class Boss2 : MonoBehaviour
             vida--;
             if (vida <= 0)
             {
+                Instantiate(Resources.Load("Death Orbs") as GameObject,this.transform.position,this.transform.rotation);
                 Destroy(this.gameObject);
                 Debug.Log("Morreu o boss");
             }
