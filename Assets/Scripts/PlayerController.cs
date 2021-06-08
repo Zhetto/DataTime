@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
             this.transform.position += new Vector3(0, speedClimb * Time.deltaTime, 0);
         }
 
-        if (Input.GetMouseButton(0) && fireRate > 0.5 && SceneManager.GetActiveScene().name != "Lab-01" && SceneManager.GetActiveScene().name != "Lab-02" && SceneManager.GetActiveScene().name != "Lab-Final")
+        if (Input.GetMouseButton(0) && fireRate > 0.5 && SceneManager.GetActiveScene().name != "Lab-01" && SceneManager.GetActiveScene().name != "Lab-02" && SceneManager.GetActiveScene().name != "Lab-Final" && SceneManager.GetActiveScene().name != "Menu")
         {
             Debug.Log("Clicou");
             //Fire();
