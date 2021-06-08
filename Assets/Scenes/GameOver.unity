@@ -370,7 +370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Precione \"Espa\xE7o\" para ir ao Menu"
+  m_Text: "Pressione \"Espa\xE7o\" para ir ao Menu"
 --- !u!222 &1507088276
 CanvasRenderer:
   m_ObjectHideFlags: 0
