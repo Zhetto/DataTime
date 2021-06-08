@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1447,7 +1447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: -14.999998}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738792250
@@ -3525,7 +3525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: -14.999998}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548026263
@@ -3912,18 +3912,18 @@ MonoBehaviour:
   controller: {fileID: 328863126}
   Humphrey:
   - sentences: "Houve uma mudan\xE7a nos gr\xE1ficos atemporais, algo a mais foi
-      puxado junto com voc\xEA. \r\nNunca tivemos esses dados antes. N\xE3o sabemos
+      puxado junto com voc\xEA. \rNunca tivemos esses dados antes. N\xE3o sabemos
       o que pode ter ocorrido."
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
   - sentences: "Obrigado Dr. Humphrey! N\xF3s sab\xEDamos que poder\xEDamos contar
       com voc\xEAs. Agora com \r\nsua ida \xE0s Grandes Navega\xE7\xF5es Chinesas,
-      tome cuidado, voc\xEA e os artefatos que faltam s\xE3o muito \r\nimportantes
+      tome cuidado, voc\xEA e os artefatos que faltam s\xE3o muito \rimportantes
       para a GEMU."
     name: Sr. Oswald
     sprite: {fileID: 21300000, guid: 0b02bf2b6ffbc00408b109df32ffe41f, type: 3}
   - sentences: "Cuide-se Jeff, quando voc\xEA voltar comeremos algumas por\xE7\xF5es
-      de batatas \r\nfritas clonadas."
+      de batatas \rfritas clonadas."
     name: Dra. Ellie Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
   - sentences: "Vou cobrar! Obrigada pessoal. Vejo voc\xEAs daqui h\xE1 algumas horas,
@@ -3932,7 +3932,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   Kelley:
   - sentences: "Houve uma mudan\xE7a nos gr\xE1ficos atemporais, algo a mais foi
-      puxado junto com voc\xEA. \r\nNunca tivemos esses dados antes. N\xE3o sabemos
+      puxado junto com voc\xEA. \rNunca tivemos esses dados antes. N\xE3o sabemos
       o que pode ter ocorrido."
     name: Dra Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
@@ -3943,7 +3943,7 @@ MonoBehaviour:
     name: Sr Oswald
     sprite: {fileID: 21300000, guid: 0b02bf2b6ffbc00408b109df32ffe41f, type: 3}
   - sentences: "Cuide-se El, quando voc\xEA voltar comeremos algumas por\xE7\xF5es
-      de batatas \r\nfritas clonadas."
+      de batatas \rfritas clonadas."
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   - sentences: "Vou cobrar! Obrigada pessoal. Vejo voc\xEAs daqui h\xE1 algumas horas,

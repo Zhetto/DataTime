@@ -73,7 +73,7 @@ public class Room : MonoBehaviour
                     //Debug.Log("Ir até o quarto");
                     cam.transform.position = Vector3.MoveTowards(cam.transform.position, initialPosition, forceGo);
                 }
-                else
+                else if(cam.orthographicSize >= limitExpandMax)
                 {
                     cam.GetComponent<MoveCamera>().enabled = true;
                     if (sprite.color.a <= 0)

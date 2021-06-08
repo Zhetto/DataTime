@@ -1221,6 +1221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480398981}
   - component: {fileID: 480398982}
+  - component: {fileID: 480398983}
   m_Layer: 8
   m_Name: Duna 4
   m_TagString: Untagged
@@ -1292,6 +1293,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &480398983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480398980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b383ee6c16e32e941836369e72f82548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0.005
 --- !u!1001 &526615102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2365,6 +2379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 872313030}
   - component: {fileID: 872313031}
+  - component: {fileID: 872313032}
   m_Layer: 8
   m_Name: Duna 2
   m_TagString: Untagged
@@ -2436,6 +2451,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &872313032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872313029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b383ee6c16e32e941836369e72f82548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0.01
 --- !u!1 &934495760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,22 +2762,22 @@ PrefabInstance:
     - target: {fileID: 4747126779658713801, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000002
+      value: -14.999998
       objectReference: {fileID: 0}
     - target: {fileID: 4747126779720164680, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.00013
+      value: -15.000122
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780044518783, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.000002
+      value: -14.999998
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780098984451, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.00013
+      value: -15.000122
       objectReference: {fileID: 0}
     - target: {fileID: 4747126780452196872, guid: 15a63f8c466619045995881b0856db34,
         type: 3}
@@ -3132,6 +3160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1083932496}
   - component: {fileID: 1083932497}
+  - component: {fileID: 1083932498}
   m_Layer: 8
   m_Name: Duna 3
   m_TagString: Untagged
@@ -3203,6 +3232,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1083932498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083932495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b383ee6c16e32e941836369e72f82548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0.007
 --- !u!1 &1115984236
 GameObject:
   m_ObjectHideFlags: 0
@@ -8496,8 +8538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.797}
   m_AnchorMin: {x: 0.023000002, y: 0.79528296}
   m_AnchorMax: {x: 0.06939372, y: 0.8972204}
-  m_AnchoredPosition: {x: 6.799988, y: 5.730011}
-  m_SizeDelta: {x: 5.545597, y: -12.887611}
+  m_AnchoredPosition: {x: 4.9100037, y: -0.0074539185}
+  m_SizeDelta: {x: 2.3175945, y: -1.7328491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432042599
 MonoBehaviour:
@@ -8520,7 +8562,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 785929ac15e629949a22d22a9c128120, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9767,7 +9809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.004651163, y: 0.7683823}
   m_AnchorMax: {x: 0.028550388, y: 0.8012001}
-  m_AnchoredPosition: {x: 72.499954, y: -7.4000244}
+  m_AnchoredPosition: {x: 72.49993, y: -7.4000244}
   m_SizeDelta: {x: 145, y: 17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877961937

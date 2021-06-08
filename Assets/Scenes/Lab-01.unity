@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -313,7 +313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: -14.999998}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399752762
@@ -1805,7 +1805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: -14.999998}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047106873
@@ -3293,12 +3293,12 @@ MonoBehaviour:
   dialogueHumphrey:
   - sentences: "Pois bem, Doutor, o senhor ser\xE1 levado \xE0 duas Eras,  sendo
       o Egito Antigo e Grandes\r\nNavega\xE7\xF5es da China.  Lembre-se que o senhor
-      estar\xE1 basicamente em outros mundos, que para\r\nn\xF3s, ainda s\xE3o primitivos."
+      estar\xE1 basicamente em outros mundos, que para\r n\xF3s, ainda s\xE3o primitivos."
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
   - sentences: "Sobre suas vestimentas, voc\xEA n\xE3o ser\xE1 notada, pois com nosso
-      \r\nequipamento voc\xEA estar\xE1 camuflada \xE0 era correspondente. Mesmo
-      assim n\xE3o desperte muita \r\naten\xE7\xE3o, e que sua cren\xE7a a acompanhe.\r"
+      \requipamento voc\xEA estar\xE1 camuflada \xE0 era correspondente. Mesmo assim
+      n\xE3o desperte muita \raten\xE7\xE3o, e que sua cren\xE7a a acompanhe.\r"
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
   - sentences: Ok, Dr. Humphrey, consegue me ouvir? Mesmo estando do meu lado?
@@ -3316,12 +3316,12 @@ MonoBehaviour:
   dialogueKelley:
   - sentences: "Pois bem, Doutora, a senhora ser\xE1 levada a duas Eras, sendo o
       Egito Antigo e Grandes\r\nNavega\xE7\xF5es da China. Lembre-se que a senhora
-      estar\xE1 basicamente em outros mundos, que para\r\nn\xF3s, ainda s\xE3o primitivos."
+      estar\xE1 basicamente em outros mundos, que para\r n\xF3s, ainda s\xE3o primitivos."
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
   - sentences: "Sobre suas vestimentas, voc\xEA n\xE3o ser\xE1 notada, pois com nosso
-      \r\nequipamento voc\xEA estar\xE1 camuflada \xE0 era correspondente. Mesmo
-      assim n\xE3o desperte muita \r\naten\xE7\xE3o, e que sua cren\xE7a a acompanhe.\r"
+      \requipamento voc\xEA estar\xE1 camuflada \xE0 era correspondente. Mesmo assim
+      n\xE3o desperte muita \raten\xE7\xE3o, e que sua cren\xE7a a acompanhe.\r"
     name: Dra. Tyler
     sprite: {fileID: 21300000, guid: 71502b71aacf44f4087be06cae73d758, type: 3}
   - sentences: Ok, Dra. Kelley, consegue me ouvir? Mesmo estando do meu lado?
@@ -4586,8 +4586,8 @@ PrefabInstance:
         type: 3}
       propertyPath: initial.Array.data[7].sentences
       value: "Ap\xF3s 142 anos de pesquisa, testes e muito estresse, n\xF3s finalmente
-        conseguimos com \xEAxito um \r\ngrande avan\xE7o na nossa pesquisa. A partir
-        de hoje, \xE0s 18 horas, o mundo inteiro saber\xE1 que n\xF3s, a \r\nGEMU,
+        conseguimos com \xEAxito um \rgrande avan\xE7o na nossa pesquisa. A partir
+        de hoje, \xE0s 18 horas, o mundo inteiro saber\xE1 que n\xF3s, a \rGEMU,
         finalmente conseguiremos viajar para o passado. "
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
@@ -4595,7 +4595,7 @@ PrefabInstance:
       propertyPath: initial.Array.data[8].sentences
       value: "Por isso, voc\xEAs, Dr. Humphrey e Dra. \r\nKelley est\xE3o aqui, queremos
         que um de voc\xEAs prossiga a pesquisa pelo laborat\xF3rio e um de voc\xEAs
-        \r\nprossiga com a pesquisa em campo."
+        \rprossiga com a pesquisa em campo."
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
@@ -4610,13 +4610,13 @@ PrefabInstance:
       propertyPath: initial.Array.data[10].sentences
       value: "Quanto aos danos colaterais n\xE3o se \r\npreocupem, pois j\xE1 houve
         muitos testes, e os danos s\xE3o quase nulos. Quase\u2026 Mas agora, voltemos
-        \r\na comemorar!\r"
+        \ra comemorar!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: initial.Array.data[11].sentences
       value: "\xC9 muita informa\xE7\xE3o de uma vez, mas fico extremamente feliz
-        por essa \r\noportunidade!"
+        por essa \roportunidade!"
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
