@@ -3088,6 +3088,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1654230554244247691, guid: 4929b9dc84ac95848990a37c90d4bf81,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1654230554419075906, guid: 4929b9dc84ac95848990a37c90d4bf81,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3096,6 +3101,11 @@ PrefabInstance:
     - target: {fileID: 1654230554419075906, guid: 4929b9dc84ac95848990a37c90d4bf81,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654230554419076285, guid: 4929b9dc84ac95848990a37c90d4bf81,
+        type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
