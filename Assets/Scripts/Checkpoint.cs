@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
 {
     public static int restLife { get; set; }
     public static string lastLevelName { get; set; }
+    public static bool checkPointBoss { get; set; }
 
     void Awake()
     {
@@ -15,6 +16,7 @@ public class Checkpoint : MonoBehaviour
             resetKeys();
         }
 
+        checkPointBoss = PlayerPrefs.GetInt("checkPointBoss") == 0 ? false : true;
         restLife = PlayerPrefs.GetInt("restLife");
         lastLevelName = PlayerPrefs.GetString("lastLevelName");
     }
@@ -24,10 +26,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Menu")
         {
-            
-            Debug.Log("Antes RestLife: " + restLife + " lastLevelName: " + lastLevelName);
             alterLastLevelName(SceneManager.GetActiveScene().name);
-            Debug.Log("Depois RestLife: " + restLife + " lastLevelName: " + lastLevelName);
         }else if(SceneManager.GetActiveScene().name == "Menu" || SceneManager.GetActiveScene().name == "Lab-Final")
         {
             Cursor.visible = true;
@@ -60,6 +59,8 @@ public class Checkpoint : MonoBehaviour
         Debug.Log("Resetou");
         PlayerPrefs.SetInt("restLife", 3);
         PlayerPrefs.SetString("lastLevelName", "Lab-01");
+        PlayerPrefs.SetInt("checkPointBoss", 0);
         lastLevelName = PlayerPrefs.GetString("lastLevelName");
+        checkPointBoss = PlayerPrefs.GetInt("checkPointBoss") == 0 ? false : true ;
     }
 }

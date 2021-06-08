@@ -10,6 +10,11 @@ public class PortaController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        if (Checkpoint.checkPointBoss)
+        {
+            GameObject.FindGameObjectWithTag("Player").transform.position += Vector3.down * 12;
+            GameObject.FindGameObjectWithTag("Player").transform.position += Vector3.left * 30;
+        }
     }
 
     // Update is called once per frame
@@ -23,6 +28,8 @@ public class PortaController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             anim.SetTrigger("Fechar");
+            Checkpoint.checkPointBoss = true;
+            PlayerPrefs.SetInt("checkPointBoss", 1);
         }
     }
 }

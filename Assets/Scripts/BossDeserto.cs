@@ -43,7 +43,7 @@ public class BossDeserto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vida = 23;
+        vida = 1;
         idleMoveDirection.Normalize();
         attackMoveDirection.Normalize();
         enemyRB = GetComponent<Rigidbody2D>();
@@ -74,6 +74,8 @@ public class BossDeserto : MonoBehaviour
 
         if (vida <= 0)
         {
+            GameObject fx = Instantiate(Resources.Load("BossFx") as GameObject,this.transform.position,this.transform.rotation);
+            fx.transform.position = new Vector3(fx.transform.position.x, fx.transform.position.y, 0);
             bossMorto = true;
             Destroy(this.gameObject);
         }

@@ -332,6 +332,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Fire()
     {
+        dano.PlayOneShot(Resources.Load("Tiro") as AudioClip);
         GameObject obj = ObjectPooler.current.GetPooledObject();
         if (obj == null) return;
         obj.GetComponent<ProjectileControllerJ>().Atirando(transform);
