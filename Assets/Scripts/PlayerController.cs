@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
             this.transform.position += new Vector3(0, speedClimb * Time.deltaTime, 0);
         }
 
-        if (Input.GetMouseButton(0) && fireRate > 0.5)
+        if (Input.GetMouseButton(0) && fireRate > 0.5 && SceneManager.GetActiveScene().name != "Lab-01" && SceneManager.GetActiveScene().name != "Lab-02" && SceneManager.GetActiveScene().name != "Lab-Final")
         {
             Debug.Log("Clicou");
             //Fire();
@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Walk", false);
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && SceneManager.GetActiveScene().name != "Lab-Final")
         {
             anim.SetBool("Fire", false);
         }
