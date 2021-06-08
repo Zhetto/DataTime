@@ -5,6 +5,8 @@ using UnityEngine;
 public class PortaController : MonoBehaviour
 {
     public Animator anim;
+    public AudioSource ambiente;
+    public AudioSource boss;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,8 @@ public class PortaController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            ambiente.Stop();
+            boss.Play();
             anim.SetTrigger("Fechar");
             Checkpoint.checkPointBoss = true;
             PlayerPrefs.SetInt("checkPointBoss", 1);
