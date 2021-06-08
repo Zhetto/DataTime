@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     GameObject[] spawners;
     [SerializeField]
     GameObject enemy,door;
+    AudioSource aud;
     // Start is called before the first frame update
     void Start()
     {

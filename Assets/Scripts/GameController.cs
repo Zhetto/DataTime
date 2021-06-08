@@ -57,6 +57,11 @@ public class GameController : MonoBehaviour
             item.volume = Volume;
         }
 
+        if(SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Fase2-level1" || SceneManager.GetActiveScene().name == "Lab-02" || SceneManager.GetActiveScene().name == "Lab-Final")
+        {
+            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Resources.Load("Teleport") as AudioClip);
+        }
+
 
         if (SceneManager.GetActiveScene().name == "Egito1" || SceneManager.GetActiveScene().name == "Fase2-level3" || SceneManager.GetActiveScene().name == "Fase2-level2" || SceneManager.GetActiveScene().name == "Egito2" || SceneManager.GetActiveScene().name == "Egito3" || SceneManager.GetActiveScene().name == "Lab-Final" || SceneManager.GetActiveScene().name == "Fase2-boss")
         {
