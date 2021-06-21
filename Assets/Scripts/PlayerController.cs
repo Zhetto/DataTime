@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     Vector3  movement;
     Platform platform;
     public static bool directionRight;
-    Animator anim;
+    public Animator anim;
     float scaleX;
     private Vector3 dRight;
     private Vector3 dLeft;
@@ -274,16 +274,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player recebeu Dano");
         }
 
-        if (collision.CompareTag("Odre") && pegouOdre == false)
-        {
-            dialogo.GetComponent<DialogueController>().enabled = true;
-            anim.SetBool("Walk", false);
-            //textoBarraca.gameObject.SetActive(true);
-            temOdre = true;
-            odreUsos = 3;
-            pegouOdre = true;
-        }
-
         if (collision.CompareTag("Saida1"))
         {
             SceneManager.LoadScene("Egito2");
@@ -304,14 +294,6 @@ public class PlayerController : MonoBehaviour
         {
             laranjaUsos++;
             Debug.Log("Laranja add");
-        }
-
-        if (collision.CompareTag("NPC") && laranjaUsos == 0 && pegouLaranjas == false)
-        {
-            dialogo.GetComponent<DialogueController>().enabled = true;
-            anim.SetBool("Walk", false);
-            laranjaUsos += 3;
-            pegouLaranjas = true;
         }
 
         if (collision.CompareTag("Porta"))

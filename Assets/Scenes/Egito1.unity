@@ -775,9 +775,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6279344154420c64192f95ff5282095a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counterInit: {fileID: 680803965}
+  counterInit: {fileID: 0}
   enemyController: {fileID: 0}
   enemyUi: {fileID: 0}
+  bloqueiaInicio: 0
 --- !u!50 &217579810
 Rigidbody2D:
   serializedVersion: 4
@@ -14212,6 +14213,7 @@ GameObject:
   - component: {fileID: 1301629658}
   - component: {fileID: 1301629657}
   - component: {fileID: 1301629659}
+  - component: {fileID: 1301629660}
   m_Layer: 0
   m_Name: NPC Deserto - Velinha
   m_TagString: NPC
@@ -14310,6 +14312,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.440245, y: 7.9581704}
   m_EdgeRadius: 0
+--- !u!114 &1301629660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301629656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10acfea481fa424489ca8f7221020fd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - sentences: "Ora ora, um novo cliente, pegue estas tr\xEAs Laranjas como cortesia.\nInclusive,
+      h\xE1 algumas laranjas perdidas pela cidade, sinta-se a vontade para peg\xE1-las,
+      elas podem recuperar um pouco de sua vida caso esteja ferido."
+    name: Vendedora de Laranjas
+    sprite: {fileID: 4424229562633013849, guid: 6d55e66363c15a24a85cf1f284a365d8,
+      type: 3}
+  - sentences: "Mas tome cuidado pois existem escorpi\xF5es gigantes por ai."
+    name: Vendedora de Laranjas
+    sprite: {fileID: 4424229562633013849, guid: 6d55e66363c15a24a85cf1f284a365d8,
+      type: 3}
 --- !u!1001 &1311573424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14702,7 +14727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0037500001, y: 0.808}
   m_AnchorMax: {x: 0.030000001, y: 0.84400004}
-  m_AnchoredPosition: {x: 72.399666, y: -7}
+  m_AnchoredPosition: {x: 72.3997, y: -7}
   m_SizeDelta: {x: 139, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373653904
@@ -15152,7 +15177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444929871}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9de8c5db409f5649856dfbd8441e2d5, type: 3}
   m_Name: 
@@ -15255,27 +15280,59 @@ PrefabInstance:
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
-        type: 3}
-      propertyPath: initial.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
+      propertyPath: initial.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
       propertyPath: initial.Array.data[0].name
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[1].name
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[2].name
       value: Vendedora de Laranjas
       objectReference: {fileID: 0}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: initial.Array.data[0].sprite
       value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[2].sprite
+      value: 
       objectReference: {fileID: 4424229562633013849, guid: 6d55e66363c15a24a85cf1f284a365d8,
         type: 3}
     - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
         type: 3}
       propertyPath: initial.Array.data[0].sentences
+      value: "Para andar aperte A ou D, o pulo \xE9 realizado ao pressionar a tecla
+        W"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[1].sentences
+      value: "Para enfrentar os inimigos, movimente a mira pelo mouse e clique com
+        o bot\xE3o esquerdo para atirar"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236691226528048888, guid: 2aa942797b06e3e40aae8426ada0d8d1,
+        type: 3}
+      propertyPath: initial.Array.data[2].sentences
       value: "Ora ora, um novo cliente, pegue estas tr\xEAs Laranjas como cortesia.\nInclusive,
         h\xE1 algumas laranjas perdidas pela cidade, sinta-se a vontade para peg\xE1-las,
         elas podem recuperar um pouco de sua vida caso esteja ferido."
