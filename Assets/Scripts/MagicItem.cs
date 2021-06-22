@@ -11,7 +11,7 @@ public class MagicItem : MonoBehaviour
     [SerializeField]float colorForce;
     Color color;
     [SerializeField] Text text;
-    [SerializeField] GameObject uiEnemy, enemyController, platforms,madame;
+    [SerializeField] GameObject uiEnemy, enemyController, platforms,madame,stair;
     [SerializeField] DialogueController dialog;
     [SerializeField] Dialogue[] Kelley, Humphrey;
     // Start is called before the first frame update
@@ -51,6 +51,7 @@ public class MagicItem : MonoBehaviour
                 madame.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
                 madame.transform.position += Vector3.down*2f;
                 madame.transform.position += Vector3.left * 4f;
+                stair.SetActive(true);
                 dialog.OpenFinally = enemyController;
                 dialog.initial = GameController.playerChoice.name == "Kelley" ? Kelley : Humphrey;
                 dialog.StartDialogue();

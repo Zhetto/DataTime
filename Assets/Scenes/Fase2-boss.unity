@@ -3731,7 +3731,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 785929ac15e629949a22d22a9c128120, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -11133,6 +11133,7 @@ MonoBehaviour:
   counterInit: {fileID: 893986533}
   enemyController: {fileID: 0}
   enemyUi: {fileID: 0}
+  bloqueiaInicio: 0
 --- !u!50 &1042241060
 Rigidbody2D:
   serializedVersion: 4

@@ -12,6 +12,7 @@ public class Bed : MonoBehaviour
     [SerializeField] GameObject artefact,madame;
     [SerializeField] Dialogue[] Kelley, Humphrey;
     [SerializeField] DialogueController dialogue;
+    [SerializeField] AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,11 +36,12 @@ public class Bed : MonoBehaviour
                     GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("Walk", false);
                     dialogue.initial = GameController.playerChoice.name == "Kelley" ? Kelley : Humphrey;
                     dialogue.StartDialogue();
-                    
+                    audioSource.Play();
                     Destroy(this);
                 }
                 else
                 {
+                    audioSource.Pause();
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().enabled = false;
                     //Debug.Log("aumentar opacidade");
                     cover.SetActive(true) ;
@@ -56,7 +58,7 @@ public class Bed : MonoBehaviour
             {
                 sleep = true;
                 time = Time.time;
-                text.text = "";
+                text.text = "";               
             }
         }
     }

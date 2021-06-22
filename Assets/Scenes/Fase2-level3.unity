@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -549,7 +549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172953959}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -563,7 +563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172953958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.03, y: -10.27, z: 0}
+  m_LocalPosition: {x: -3.03, y: -9.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -614,11 +614,11 @@ EdgeCollider2D:
   - {x: -57.53117, y: 1.0311356}
   - {x: -55.24398, y: -32.251747}
   - {x: -35.841694, y: -33.6144}
-  - {x: -24.331234, y: -35.49952}
-  - {x: -11.800881, y: -34.218544}
-  - {x: 6.060792, y: -33.295044}
-  - {x: 24.960318, y: -36.557697}
-  - {x: 56.3034, y: -37.893074}
+  - {x: -24.70834, y: -33.236923}
+  - {x: -13.700579, y: -31.179031}
+  - {x: 1.8814588, y: -28.355835}
+  - {x: 16.39747, y: -25.57638}
+  - {x: 55.395164, y: -25.614271}
   - {x: 56.876217, y: 53.364147}
 --- !u!212 &218532981
 SpriteRenderer:
@@ -710,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219219968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.3, y: -18.8, z: 0}
+  m_LocalPosition: {x: 18.3, y: -17.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 93348793}
@@ -880,8 +880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.6978169}
-  m_AnchoredPosition: {x: 73.80002, y: 0}
-  m_SizeDelta: {x: -157.5213, y: -10}
+  m_AnchoredPosition: {x: 65.8, y: 0}
+  m_SizeDelta: {x: -173.51508, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264411047
 MonoBehaviour:
@@ -1156,6 +1156,77 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2119514342}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &355014661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355014664}
+  - component: {fileID: 355014663}
+  - component: {fileID: 355014662}
+  m_Layer: 0
+  m_Name: AlterStairLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &355014662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355014661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fee89e1ecc615240a039367d08bf817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stair: {fileID: 1900570333}
+--- !u!61 &355014663
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355014661}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.35135984, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2972803, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &355014664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355014661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.33, y: -10.03, z: -5.1790075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &370017459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,8 +1304,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370017459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38, y: -8.75, z: -2.74}
-  m_LocalScale: {x: 0.068273224, y: 0.068273224, z: 0.6827322}
+  m_LocalPosition: {x: -2.433, y: -8.93, z: -2.74}
+  m_LocalScale: {x: 0.056750294, y: 0.056750294, z: 0.5675029}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1431,7 +1502,8 @@ MonoBehaviour:
   - sentences: Sou, estou procurando o dono do lugar para me apresentar.
     name: Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
-  - sentences: "Amado, quem voc\xEA procura \xE9 a dona, vou te levar at\xE9 a madame"
+  - sentences: "Amado, quem voc\xEA procura \xE9 a dona, a madame est\xE1 no andar
+      de cima."
     name: Garota
     sprite: {fileID: 21300000, guid: 41488cf8af36b9344847f87a4b840e60, type: 3}
   Kelley:
@@ -1441,7 +1513,8 @@ MonoBehaviour:
   - sentences: Sou. Estou procurando o dono do lugar para me apresentar.
     name: Ellie
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
-  - sentences: "Amada, quem voc\xEA procura \xE9 a dona. Vou te levar at\xE9 a madame"
+  - sentences: "Amada, quem voc\xEA procura \xE9 a dona. A madame est\xE1 no andar
+      de cima."
     name: Garota
     sprite: {fileID: 21300000, guid: 41488cf8af36b9344847f87a4b840e60, type: 3}
 --- !u!1 &466581350
@@ -1632,6 +1705,7 @@ MonoBehaviour:
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   dialogue: {fileID: 1692032560}
+  audioSource: {fileID: 799344905}
 --- !u!61 &525368903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1924,6 +1998,7 @@ MonoBehaviour:
   enemyController: {fileID: 17466265}
   platforms: {fileID: 888921184}
   madame: {fileID: 734044590}
+  stair: {fileID: 1900570333}
   dialog: {fileID: 1692032560}
   Kelley:
   - sentences: " Vamos garota! Esse \xE9 seu teste, eu sei que voc\xEA est\xE1 aqui
@@ -2897,7 +2972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &888921185
 Transform:
   m_ObjectHideFlags: 0
@@ -4759,7 +4834,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: -15.902, z: 0}
 --- !u!1 &1507919160
 GameObject:
@@ -5780,7 +5855,8 @@ MonoBehaviour:
   - sentences: Sou. Estou procurando o dono do lugar para me apresentar.
     name: Ellie
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
-  - sentences: "Amada, quem voc\xEA procura \xE9 a dona, vou te levar at\xE9 a madame"
+  - sentences: "Amada, quem voc\xEA procura \xE9 a dona, a madame est\xE1 no andar
+      de cima."
     name: Garota
     sprite: {fileID: 21300000, guid: 41488cf8af36b9344847f87a4b840e60, type: 3}
   OpenFinally: {fileID: 0}
@@ -5823,7 +5899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15.000029}
+  m_AnchoredPosition: {x: 0, y: -15.0000305}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1692224744
@@ -5967,7 +6043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15.000029}
+  m_AnchoredPosition: {x: 0, y: -15.0000305}
   m_SizeDelta: {x: -40, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703915685
@@ -6201,6 +6277,7 @@ MonoBehaviour:
   show: 0
   go: 0
   opened: 0
+  dialoguePlayed: 0
   chair: {fileID: 1900570335}
   forceColor: 0.06
   forceExpand: 0.06
@@ -6217,18 +6294,18 @@ MonoBehaviour:
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
   - sentences: "Madame Shih, estou em busca de uma caveira, a senhora sabe qual \xE9.
-      \xC9 de extrema \r\nimport\xE2ncia para o nosso futuro."
+      \xC9 de extrema import\xE2ncia para o nosso futuro."
     name: Dra. Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
   - sentences: Garota, por qual motivo eu te daria a caveira do meu falecido marido?
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
   - sentences: "Por um motivo que vai al\xE9m de mim, de voc\xEA e de qualquer outra
-      pessoa. O futuro da \r\nhumanidade."
+      pessoa. O futuro da humanidade."
     name: Dra. Kelley
     sprite: {fileID: 21300000, guid: 453a638a8c5e747459bee9bf42827c50, type: 3}
   - sentences: "Durma crian\xE7a, amanh\xE3 conversaremos sobre esse tal de futuro
-      e o quanto ele \r\nvaler\xE1 para mim."
+      e o quanto ele valer\xE1 para mim."
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
   Humphrey:
@@ -6237,18 +6314,18 @@ MonoBehaviour:
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
   - sentences: "Madame Shih, estou em busca de uma caveira, a senhora sabe qual \xE9.
-      \xC9 de extrema \r\nimport\xE2ncia para o nosso futuro."
+      \xC9 de extrema import\xE2ncia para o nosso futuro."
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   - sentences: Garoto, por qual motivo eu te daria a caveira do meu falecido marido?
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
   - sentences: "Por um motivo que vai al\xE9m de mim, de voc\xEA e de qualquer outra
-      pessoa. O futuro da \r\nhumanidade."
+      pessoa. O futuro da humanidade."
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   - sentences: "Durma crian\xE7a, amanh\xE3 conversaremos sobre esse tal de futuro
-      e o quanto ele \r\nvaler\xE1 para mim.\r"
+      e o quanto ele valer\xE1 para mim.\r"
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
 --- !u!1 &1765947685
@@ -6839,7 +6916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900570334
 Transform:
   m_ObjectHideFlags: 0
@@ -6848,8 +6925,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900570333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.15, y: -0, z: 0}
-  m_LocalScale: {x: 2.0259027, y: 2.0091143, z: 2.0091143}
+  m_LocalPosition: {x: 2.8, y: 0.2, z: 0}
+  m_LocalScale: {x: 2.0029657, y: 1.9863673, z: 1.9863673}
   m_Children: []
   m_Father: {fileID: 218532982}
   m_RootOrder: 1

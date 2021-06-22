@@ -7,7 +7,7 @@ public class Room : MonoBehaviour
 {
     SpriteRenderer sprite;
     [SerializeField] SpriteRenderer madame;
-    public bool show,go,opened;
+    public bool show,go,opened,dialoguePlayed;
     Camera cam;
     Vector3 initialPosition;
     [SerializeField] SpriteRenderer chair;
@@ -23,6 +23,7 @@ public class Room : MonoBehaviour
         show = false;
         cam = Camera.main;
         go = false;
+        dialoguePlayed = false;
 
     }
 
@@ -98,9 +99,13 @@ public class Room : MonoBehaviour
             {
                 item.SetActive(false);
             }
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("Walk", false);
-            dialog.initial = GameController.playerChoice.name == "Kelley" ? Kelley : Humphrey ;
-            dialog.StartDialogue();
+            if (!dialoguePlayed)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetBool("Walk", false);
+                dialog.initial = GameController.playerChoice.name == "Kelley" ? Kelley : Humphrey;
+                dialog.StartDialogue();
+                dialoguePlayed = true;
+            }
         }
     }
 
