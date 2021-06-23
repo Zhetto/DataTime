@@ -66,6 +66,7 @@ public class GameController : MonoBehaviour
             {
 
                 GameObject obj = Instantiate(playerDefault, player.transform.position, player.transform.rotation);
+                playerChoice = playerDefault;
             }
             else
             {
