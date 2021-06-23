@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -296,8 +296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -638.8}
-  m_SizeDelta: {x: 0, y: 646.6719}
+  m_AnchoredPosition: {x: 0, y: -1436}
+  m_SizeDelta: {x: 0, y: 1876.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359175702
 MonoBehaviour:
@@ -311,7 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ae0828c061a564da1ec1b9529e252f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.4
+  speed: 1
+  limit: 1480
 --- !u!114 &1359175703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +334,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -344,13 +345,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Data Time\n\nCr\xE9ditos\n\nJogos digitais - UNIARA 2021\n\nDesenvolvedores\n\nCezar
-    Munhoz\nJos\xE9 Guilherme Tozzo\nMarcela Santarossa Sapiain\nMurilo Henrique
-    Lopes\n\nOrientador\n\nHenrique Buzetto Galati\n\nAgradecimentos especiais\n\nA
-    banca de avalia\xE7\xE3o\n\nTestadores\n\nChrystian Gesteira Sales\nGabriel Bueno
-    da Silva Rosa\nIgor Lopes Martins\nIgor Ribeiro de Oliveira\nJos\xE9 Franklin
-    da Silva Pinto\nJ\xFAlio C\xE9sar Gon\xE7alves da Silva\nMateus de Ara\xFAjo
-    D\xE1cio Barcellos Machado\nThayane de Natali\nWesley Arthur Batista\nRenan Fragal\xE1"
+  m_Text: "Data Time\n\n\n\n\n\nCr\xE9ditos\n\n\n\n\n\nJogos digitais - UNIARA 2021\n\n\n\n\n\nDesenvolvedores\n\nCezar
+    Munhoz\nJos\xE9 Guilherme Brunetti Tozzo\nMarcela Santarossa Sapiain\nMurilo
+    Henrique Lopes\n\n\n\n\n\nOrientador\n\nHenrique Buzetto Galati\n\n\n\n\n\nAgradecimentos
+    especiais\n\n\n\n\n\nA banca de avalia\xE7\xE3o\n\nHenrique Buzetto Galati\nAdeline
+    Gil\nCarlos Gil Mazzon\n\n\n\n\n\nParticipa\xE7\xE3o especial\n\nGleidson Gouv\xEAa
+    da Silva\n\n\n\n\n\nTestadores\n\nChrystian Gesteira Sales\nGabriel Bueno da
+    Silva Rosa\nIgor Lopes Martins\nIgor Ribeiro de Oliveira\nJos\xE9 Franklin da
+    Silva Pinto\nJ\xFAlio C\xE9sar Gon\xE7alves da Silva\nMateus de Ara\xFAjo D\xE1cio
+    Barcellos Machado\nRenan Fragal\xE1\nThayane de Natali\nWesley Arthur Batista\n\n\n\n\n\nStreamers\n\nGabriel
+    C\xE1ceres (L4K3) - twitch.tv/l4k3\nRafael Augusto de Oliveira (Zety) - twitch.tv/zetylicioustv"
 --- !u!222 &1359175704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -490,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

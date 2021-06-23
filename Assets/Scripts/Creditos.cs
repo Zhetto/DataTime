@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Creditos : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] int limit;
     Text txt;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class Creditos : MonoBehaviour
         txt.rectTransform.localPosition += Vector3.up * speed;
         Debug.Log(txt.rectTransform.localPosition);
 
-        if (txt.rectTransform.localPosition.y >= 400)
+        if (txt.rectTransform.localPosition.y >= limit)
         {
             SceneManager.LoadScene("Menu");
         }
