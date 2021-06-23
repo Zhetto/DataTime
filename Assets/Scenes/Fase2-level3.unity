@@ -1705,7 +1705,7 @@ MonoBehaviour:
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   dialogue: {fileID: 1692032560}
-  audioSource: {fileID: 799344905}
+  audioSource: {fileID: 0}
 --- !u!61 &525368903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6436,8 +6436,7 @@ MonoBehaviour:
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
   Humphrey:
-  - sentences: " Ouvi dizer que voc\xEA estava procurando por mim. O que voc\xEA
-      quer?"
+  - sentences: " Ouvi dizer que voc\xEA estava procurando por mim. O que voc\xEA quer?"
     name: Madame Shih
     sprite: {fileID: 21300000, guid: f241bb0a471524342a5897f25eaf9b00, type: 3}
   - sentences: "Madame Shih, estou em busca de uma caveira, a senhora sabe qual \xE9.
