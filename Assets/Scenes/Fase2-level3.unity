@@ -1705,7 +1705,7 @@ MonoBehaviour:
     name: Dr. Humphrey
     sprite: {fileID: 21300000, guid: 6ea1e6e9184600546a108e353cd5a039, type: 3}
   dialogue: {fileID: 1692032560}
-  audioSource: {fileID: 799344905}
+  audioSource: {fileID: 0}
 --- !u!61 &525368903
 BoxCollider2D:
   m_ObjectHideFlags: 0
