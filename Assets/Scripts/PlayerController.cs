@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
     public Text textoO;
     SpriteRenderer sprite;
     AudioSource dano;
+    public AudioSource encantador;
     Vector2 mousePosition;
     public BossDeserto boss;
     public AudioSource consumir;
@@ -91,6 +92,11 @@ public class PlayerController : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         dano = GetComponent<AudioSource>();
 
+        if (SceneManager.GetActiveScene().name == "Egito1")
+        {
+            encantador = GameObject.FindGameObjectWithTag("Encantador").GetComponent<AudioSource>();
+        }
+        
         testeLaranjas = laranjaUsos;
 
         textoL.text = testeLaranjas.ToString();
@@ -265,6 +271,11 @@ public class PlayerController : MonoBehaviour
             this.rb.gravityScale = 2;
             this.climb = false;
         }
+
+        if (collision.CompareTag("Encantador"))
+        {
+            encantador.Stop();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -303,6 +314,11 @@ public class PlayerController : MonoBehaviour
             camera.xMin = -56;
             camera.yMax = 13;
             camera.yMin = -13;
+        }
+
+        if (collision.CompareTag("Encantador"))
+        {
+            encantador.Play();
         }
     }
 

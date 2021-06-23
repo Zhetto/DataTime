@@ -13,7 +13,7 @@ public class EnemyMeleeJ : MonoBehaviour
     public int count;
     public SpriteRenderer sprite;
     public PlayerController contador;
-    AudioSource ataque;
+    AudioSource ataque, hit;
     Color corInicial;
 
 
@@ -23,6 +23,7 @@ public class EnemyMeleeJ : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         ataque = GetComponent<AudioSource>();
         corInicial = this.GetComponent<SpriteRenderer>().color;
+        hit = GameObject.FindGameObjectWithTag("Dano").GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class EnemyMeleeJ : MonoBehaviour
                 EnemyController.spawnedEnemys--;
                 EnemyController.diedEnemys++;
             }
-            //Contador();
+            
             Destroy(this.gameObject);
         }
     }
@@ -92,6 +93,7 @@ public class EnemyMeleeJ : MonoBehaviour
 
         if (collision.CompareTag("Tiro"))
         {
+            hit.Play();
             life--;
             StartCoroutine(TomarDano());
         }

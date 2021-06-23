@@ -103,6 +103,8 @@ MonoBehaviour:
   life: 2
   lineOfSite: 10
   count: 0
+  sprite: {fileID: 0}
+  contador: {fileID: 0}
 --- !u!50 &2734047300209080834
 Rigidbody2D:
   serializedVersion: 4
