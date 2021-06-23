@@ -172,6 +172,8 @@ MonoBehaviour:
   count: 0
   sprite: {fileID: 0}
   contador: {fileID: 0}
+  ataque: {fileID: 0}
+  hit: {fileID: 0}
 --- !u!82 &6160170498874483596
 AudioSource:
   m_ObjectHideFlags: 0
