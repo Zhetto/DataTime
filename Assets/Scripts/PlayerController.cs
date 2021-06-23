@@ -169,6 +169,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(GameController.getKeyCode(LoadControl.Control.upKey)) && climb)
         {
             this.transform.position += new Vector3(0, speedClimb * Time.deltaTime, 0);
+            this.rb.velocity = Vector2.zero;
         }
 
         if (Input.GetMouseButton(0) && fireRate > 0.5 && SceneManager.GetActiveScene().name != "Lab-01" && SceneManager.GetActiveScene().name != "Lab-02" && SceneManager.GetActiveScene().name != "Lab-Final" && SceneManager.GetActiveScene().name != "Menu")
@@ -258,7 +259,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W))
             {
                 this.rb.gravityScale = 0;
-                this.rb.velocity = new Vector2();
+                this.rb.velocity = Vector2.zero;
                 this.climb = true;
             }
         }
