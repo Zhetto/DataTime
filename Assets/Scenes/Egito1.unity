@@ -14657,7 +14657,8 @@ MonoBehaviour:
     name: Vendedora de Laranjas
     sprite: {fileID: 4424229562633013849, guid: 6d55e66363c15a24a85cf1f284a365d8,
       type: 3}
-  - sentences: "Mas tome cuidado pois existem escorpi\xF5es gigantes por ai."
+  - sentences: "Mas tome cuidado pois h\xE1 algumas coisas estranhas acontecendo
+      na cidade."
     name: Vendedora de Laranjas
     sprite: {fileID: 4424229562633013849, guid: 6d55e66363c15a24a85cf1f284a365d8,
       type: 3}
