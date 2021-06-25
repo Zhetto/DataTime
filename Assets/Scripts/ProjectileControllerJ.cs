@@ -20,7 +20,7 @@ public class ProjectileControllerJ : MonoBehaviour
             //{
             //    rb.velocity = Vector3.left * projectileSpeed;
             //}
-            Debug.Log("Direção da bala");
+            //Debug.Log("Direção da bala");
 
         }
     }
@@ -37,7 +37,7 @@ public class ProjectileControllerJ : MonoBehaviour
         if (collision.CompareTag("Inimigo") || collision.CompareTag("Player") || collision.CompareTag("Barreira") || collision.CompareTag("Floor"))
         {
             gameObject.SetActive(false);
-            Debug.Log("Tiro desativado");
+            //Debug.Log("Tiro desativado");
         }
     }
 
@@ -49,6 +49,6 @@ public class ProjectileControllerJ : MonoBehaviour
     private void OnBecameInvisible()
     {
         gameObject.SetActive(false);
-        Debug.Log("Tiro desativado");
+        //Debug.Log("Tiro desativado");
     }
 }

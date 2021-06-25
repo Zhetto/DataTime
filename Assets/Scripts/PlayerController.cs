@@ -297,11 +297,6 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Egito3");
         }
 
-        if (collision.CompareTag("Saida3") && BossDeserto.bossMorto == true)
-        {
-            SceneManager.LoadScene("Lab-02");
-        }
-
         if (collision.CompareTag("Laranja"))
         {
             laranjaUsos++;
