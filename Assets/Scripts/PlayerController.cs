@@ -288,7 +288,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("Saida1"))
         {
-            SceneManager.LoadScene("Egito2");
+            SceneManager.LoadScene("CutsceneEgito");
         }
 
         if (collision.CompareTag("Saida2") && inimigoCount == 0)

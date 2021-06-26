@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Egito1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/CutsceneEgito.unity
+    guid: 4d9e57b7799f227488555e42618279fe
+  - enabled: 1
     path: Assets/Scenes/Egito2.unity
     guid: 6636be86c8fc82442bb64951b0c0cf82
   - enabled: 1
@@ -26,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase2-level1.unity
     guid: 762ec7c52026bd74a86a0c65c5be7e1d
+  - enabled: 1
+    path: Assets/Scenes/CutsceneChina.unity
+    guid: 7177a90b4a8acab489204fcd1ea9b38b
   - enabled: 1
     path: Assets/Scenes/Fase2-level2.unity
     guid: b21a3335fc6ed3b48947d2a94f0be87f
