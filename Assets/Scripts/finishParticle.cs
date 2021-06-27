@@ -16,6 +16,7 @@ public class finishParticle : MonoBehaviour
         this.transform.position = player.transform.position + Vector3.up*20;
         maxHeight = this.transform.position.y + 35;
         player.SetActive(false);
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(Resources.Load("Teleport") as AudioClip);
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class finishParticle : MonoBehaviour
 
         if (this.transform.position.y >= maxHeight)
         {
+            
             if(scene != "")
             {
                 SceneManager.LoadScene(scene);
