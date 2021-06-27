@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static LoadControl;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -47,6 +48,13 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene().name != "Menu")
+        {
+            foreach (Text txt in GameObject.FindObjectsOfType<Text>())
+            {
+                txt.font = Resources.Load("Fonts/APompadout_Bold") as Font;
+            }
+        }
 
         foreach(AudioSource item in GameObject.FindObjectsOfType<AudioSource>())
         {

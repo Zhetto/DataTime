@@ -19,6 +19,8 @@ public class DialogueController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        name.font = Resources.Load("Fonts/APompadout_Bold") as Font;
+        message.font = Resources.Load("Fonts/APompadour_Normal") as Font;
         aud = this.gameObject.AddComponent<AudioSource>();
         aud.clip = Resources.Load("tic") as AudioClip;
         sentences = new Queue<Dialogue>();
